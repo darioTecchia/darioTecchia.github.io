@@ -1,0 +1,44 @@
+[
+  {
+    "title": "uni-api",
+    "description": "This PHP script allow you to create a simple and universal REST API",
+    "url": "https://github.com/darioTecchia/uni-api",
+    "language": "PHP"
+  },
+  {
+    "title": "powergit",
+    "description": "PowerGit is a command line interface program yaourt-like wich allow to find and clone public repositories from GitHub",
+    "url": "https://github.com/darioTecchia/powergit",
+    "language": "PowerShell"
+  },
+  {
+    "title": "Stadium Management Platform",
+    "description": "Java project developed for an Academic Course",
+    "url": "https://github.com/darioTecchia/progetto-programmazione-2",
+    "language": "Java"
+  },
+  {
+    "title": "Adapter Pattern Thesis",
+    "description": "Little Thesis on the Adatper Pattern written for an Academic Course",
+    "url": "https://github.com/darioTecchia/tesina-tpa",
+    "language": "Python"
+  },
+  {
+    "title": "rpf files integrity checker",
+    "description": "GTA V .rpf Files Integrity Checker",
+    "url": "https://github.com/darioTecchia/gta-5-.rpf-files-integrity-checker",
+    "language": "Python"
+  },
+  {
+    "title": "Knowledge Management",
+    "description": "Web App of Knowledge Management developed for an Academic Course",
+    "url": "https://github.com/darioTecchia/knowledge-management",
+    "language": "Javascript"
+  },
+  {
+    "title": "power-clone",
+    "description": "That simple script allows you to clone all repositories from a GitHub user",
+    "url": "https://github.com/darioTecchia/power-clone",
+    "language": "PowerShell"
+  }
+]

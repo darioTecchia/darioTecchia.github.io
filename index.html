@@ -1,0 +1,122 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="theme-color" content="#e74c3c">
+
+	<title>Dario Tecchia</title>
+
+	<!-- My App CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/style/app.css">
+	<!-- Font Awesome CSS -->
+	<link rel="stylesheet" type="text/css" href="bower_components/fontawesome/css/font-awesome.min.css">
+	<!-- devicon CSS -->
+	<link rel="stylesheet" type="text/css" href="bower_components/devicon/devicon.min.css">
+
+	<!-- Fonts CSS -->
+	<link rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Poiret+One' />
+
+</head>
+
+<body ng-app="app" ng-controller="AppController">
+
+	<div class="main">
+
+		<div class="info">
+			<h1>DARIO<span class="cl-alizarin">TECCHIA</span></h1>
+			<hr/>
+			<h4>
+				Un'<span class="cl-alizarin">Idiota</span> Qualunque
+				<br>
+				Computer Science <span class="cl-alizarin">Student</span>
+				<br>
+				<span class="cl-alizarin to-upper">Uni</span>versit&agrave; degli
+				<span class="cl-alizarin">S</span>tudi di
+				<span class="cl-alizarin to-upper">Sa</span>lerno
+			</h4>
+			<hr/>
+			<a href="https://github.com/darioTecchia" target="_blank"><i class="fa fa-github"></i></a>
+			<a href="https://it.linkedin.com/in/dario-tecchia-3b8934120" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+			<a href="https://www.instagram.com/dariotecchia/" target="_blank"><i class="fa fa-instagram"></i></a>
+			<a href="mailto: dariotecchia@gmail.com"><i class="fa fa-envelope"></i></a>
+		</div>
+
+		<div class="bio section">
+			<h1>
+				Short Bio
+			</h1>
+			<p class="bio-body">
+				Hi! I'm Dario <span class="cl-alizarin">Tecchia</span>, I'm 21 yo and I study Computer Science at the Universit&agrave;
+				degli Studi di Salerno, Italy. I am passionate about web programming.
+			</p>
+		</div>
+
+		<div class="skills section">
+			<h1>
+				Skills
+			</h1>
+			<table>
+				<!-- Repeat: skill in skills -->
+				<tr ng-repeat="skill in skills">
+					<td><i class="devicon-{{skill.icon}}-plain"></i></td>
+					<td> {{skill.name}} </td>
+					<td class="{{skill.level.toLowerCase()}}">{{skill.level}}</td>
+				</tr>
+			</table>
+
+		</div>
+
+		<div class="git-hub-projects section">
+			<h1>
+				Projects
+			</h1>
+			<ul class="projects-list">
+				<li class="project-item" ng-repeat="project in projects">
+					<div>
+						<a ng-href="{{project.url}}" target="_blank">
+							<h2>{{project.title}}</h2>
+						</a>
+						<div>
+							{{project.description}}
+						</div>
+						<span>{{project.language}}</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="experiences section">
+			<h1>
+				Experiences
+			</h1>
+			<ul class="experiences-list">
+				<li class="experience-item" ng-repeat="experience in experiences">
+					<div>
+						<h2>
+							{{experience.title}}
+						</h2>
+						<span>{{experience.where}}</span>
+						<div>
+							{{experience.description}}
+						</div>
+						<span>{{experience.duration}}</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+	</div>
+
+	<footer class="footer">
+		Made with <i class="cl-alizarin fa fa-heart" aria-hidden="true"></i> riding a unicorn
+	</footer>
+
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="app.js"></script>
+
+</body>
+
+</html>
