@@ -1,12 +1,13 @@
 body {
-  background-color: #FFF;
+  background-color: #00324d;
+  color: #7ca4ac;
   font-family: Poiret One, sans-serif;
   text-align: center;
   font-weight: bolder;
 }
 
 a {
-  color: black;
+  color: #7ca4ac;
   -webkit-transition: color 0.5s ease;
   -moz-transition: color 0.5s ease;
   transition: color 0.5s ease;
@@ -47,9 +48,9 @@ tr {
 }
 
 tr:hover {
-  color: #e74c3c;
-  border: #e74c3c;
-  border-bottom: solid 2px #e74c3c; 
+  color: #d71a21;
+  border: #d71a21;
+  border-bottom: solid 2px #d71a21; 
 }
 
 td {
@@ -65,7 +66,7 @@ a .fa {
 }
 
 a:hover {
-  color: #e74c3c;
+  color: #d71a21;
 }
 
 hr {
@@ -94,7 +95,7 @@ hr {
 }
 
 .cl-alizarin {
-  color: #e74c3c;
+  color: #d71a21;
 }
 
 .to-upper {
