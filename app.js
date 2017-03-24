@@ -1,4 +1,4 @@
-(function(){
+(function () {
 
   'use strict';
 
@@ -22,13 +22,20 @@
 
       console.log('AppController');
 
-      $http.get("assets/skills.json").then(function(skills) {
+      $scope.scrollTo = function (itemId) {
+        console.log(itemId);
+        document.querySelector('#' + itemId).scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+
+      $http.get("assets/skills.json").then(function (skills) {
         $scope.skills = skills.data;
       });
-      $http.get("assets/experiences.json").then(function(experiences) {
+      $http.get("assets/experiences.json").then(function (experiences) {
         $scope.experiences = experiences.data;
       });
-      $http.get("assets/projects.json").then(function(projects) {
+      $http.get("assets/projects.json").then(function (projects) {
         $scope.projects = projects.data;
       });
 

@@ -25,25 +25,34 @@
 
 	<div class="main">
 
-		<div class="info">
-			<h1>DARIO<span class="cl-alizarin">TECCHIA</span></h1>
-			<hr/>
-			<h4>
-				Un'<span class="cl-alizarin">Idiota</span> Qualunque
-				<br>
-				Computer Science <span class="cl-alizarin">Student</span>
-				<br>
-				<span class="cl-alizarin to-upper">Uni</span>versit&agrave; degli Studi di
-				<span class="cl-alizarin to-upper">Sa</span>lerno
-			</h4>
-			<hr/>
-			<a href="https://github.com/darioTecchia" target="_blank"><i class="fa fa-github"></i></a>
-			<a href="https://it.linkedin.com/in/dario-tecchia-3b8934120" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-			<a href="https://www.instagram.com/dariotecchia/" target="_blank"><i class="fa fa-instagram"></i></a>
-			<a href="mailto: dariotecchia@gmail.com"><i class="fa fa-envelope"></i></a>
+		<div class="info center">
+			<div class="info-body">
+				<h1>DARIO<span class="cl-alizarin">TECCHIA</span></h1>
+				<hr/>
+				<h4>
+					Un'<span class="cl-alizarin">Idiota</span> Qualunque
+					<br>
+					Computer Science <span class="cl-alizarin">Student</span>
+					<br>
+					<span class="cl-alizarin to-upper">Uni</span>versit&agrave; degli Studi di
+					<span class="cl-alizarin to-upper">Sa</span>lerno
+				</h4>
+				<hr/>
+				<a href="https://github.com/darioTecchia" target="_blank"><i class="fa fa-github"></i></a>
+				<a href="https://it.linkedin.com/in/dario-tecchia-3b8934120" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+				<a href="https://www.instagram.com/dariotecchia/" target="_blank"><i class="fa fa-instagram"></i></a>
+				<a href="mailto: dariotecchia@gmail.com"><i class="fa fa-envelope"></i></a>
+			</div>
+
+			<nav class="info-navbar">
+				<div ng-click="scrollTo('short-bio')">Bio</div>
+				<div ng-click="scrollTo('skills')">Skills</div>
+				<div ng-click="scrollTo('projects')">Projects</div>
+				<div ng-click="scrollTo('experiences')">Experiences</div>
+			</nav>
 		</div>
 
-		<div class="bio section">
+		<div class="bio section" id="short-bio">
 			<h1>
 				Short Bio
 			</h1>
@@ -55,7 +64,7 @@
 			</p>
 		</div>
 
-		<div class="skills section">
+		<div class="skills section" id="skills">
 			<h1>
 				Skills
 			</h1>
@@ -70,7 +79,7 @@
 
 		</div>
 
-		<div class="git-hub-projects section">
+		<div class="git-hub-projects section" id="projects">
 			<h1>
 				Projects
 			</h1>
@@ -80,6 +89,10 @@
 						<a ng-href="{{project.url}}" target="_blank">
 							<h2>{{project.title}}</h2>
 						</a>
+						<div ng-if="project.wip" class="cl-alizarin">
+							WORK IN PROGRESS
+							<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+						</div>
 						<div>
 							{{project.description}}
 						</div>
@@ -89,7 +102,7 @@
 			</ul>
 		</div>
 
-		<div class="experiences section">
+		<div class="experiences section" id="experiences">
 			<h1>
 				Experiences
 			</h1>

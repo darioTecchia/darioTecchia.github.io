@@ -1,10 +1,9 @@
 {
-  "name": "sito_personale",
+  "name": "personal_site",
   "version": "1.0.0",
   "dependencies": {
     "angular": "latest",
     "fontawesome": "latest",
-    "devicon": "latest",
-    "jquery": "latest"  
+    "devicon": "latest"
   }
 }
