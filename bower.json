@@ -4,6 +4,7 @@
   "dependencies": {
     "angular": "latest",
     "fontawesome": "latest",
-    "devicon": "latest"
+    "devicon": "latest",
+    "jquery": "latest"
   }
 }
