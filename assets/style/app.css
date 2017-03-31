@@ -4,7 +4,8 @@ body {
   font-family: Poiret One, sans-serif;
   text-align: center;
   font-weight: bolder;
-  margin: 0;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 a {
