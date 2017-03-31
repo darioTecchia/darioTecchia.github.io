@@ -11,7 +11,7 @@
     "description": "PowerGit is a command line interface program yaourt-like wich allow to find and clone public repositories from GitHub",
     "url": "https://github.com/darioTecchia/powergit",
     "language": "PowerShell",
-    "wip": false
+    "wip": true
   },
   {
     "title": "Stadium Management Platform",
@@ -46,6 +46,6 @@
     "description": "That simple script allows you to clone all repositories from a GitHub user",
     "url": "https://github.com/darioTecchia/power-clone",
     "language": "PowerShell",
-    "wip": false
+    "wip": true
   }
 ]

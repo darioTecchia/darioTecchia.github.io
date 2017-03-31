@@ -1,6 +1,6 @@
 body {
-  background-color: #00324d;
-  color: #7ca4ac;
+  background-color: #F5F5DC;
+  color: #000;
   font-family: Poiret One, sans-serif;
   text-align: center;
   font-weight: bolder;
@@ -8,7 +8,7 @@ body {
 }
 
 a {
-  color: #7ca4ac;
+  color: #4B3621;
   -webkit-transition: color 0.5s ease;
   -moz-transition: color 0.5s ease;
   transition: color 0.5s ease;
@@ -75,8 +75,12 @@ hr {
   background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(215, 26, 33, 0.75), rgba(0, 0, 0, 0));
 }
 
-nav.info-navbar div:hover {
+nav.info-navbar a:hover {
   cursor: pointer;
+  color: black;
+}
+
+nav.info-navbar a {
   color: black;
 }
 
@@ -103,8 +107,8 @@ nav.info-navbar div:hover {
   position: absolute;
   bottom: 0px;
   width: 100%;
-  height: 10vh;
-  background-color: #d71a21;
+  height: 9vh;
+  background-color: #D2B48C;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -126,6 +130,8 @@ nav.info-navbar div:hover {
 
 .bio-body {
   font-size: 1.5em;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .footer {
@@ -134,7 +140,7 @@ nav.info-navbar div:hover {
 }
 
 .cl-alizarin {
-  color: #d71a21;
+  color: #C0392B;
 }
 
 .to-upper {
