@@ -57,7 +57,14 @@ td {
   font-weight: bold;
 }
 
-a .fa {
+/*a .fa {
+  margin-top: 7px !important;
+  font-size: 2em !important;
+  margin-left: 3px;
+  margin-right: 3px;
+}*/
+
+.link-group a {
   margin-top: 7px !important;
   font-size: 2em !important;
   margin-left: 3px;
@@ -82,6 +89,16 @@ nav.info-navbar a:hover {
 
 nav.info-navbar a {
   color: black;
+}
+
+nav.go-up {
+  position: fixed !important;
+  bottom: 15px !important;
+  right: 15px !important;
+  font-size: 2em !important;
+  background-color: #D2B48C !important;
+  padding: 5px !important;
+  z-index: 100;
 }
 
 .center { 
@@ -114,6 +131,7 @@ nav.info-navbar a {
   justify-content: space-around;
   align-items: center;
   /*text-align: center;*/
+  z-index: 101;
 }
 
 .navbar-link {

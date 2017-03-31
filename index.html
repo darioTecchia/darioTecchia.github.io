@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	
-        <title>Dario Tecchia</title>
+	<title>Dario Tecchia</title>
 
 	<!-- My App CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/style/app.css">
@@ -20,7 +20,13 @@
 
 </head>
 
-<body ng-app="app" ng-controller="AppController">
+<body id="home" ng-app="app" ng-controller="AppController">
+
+	<nav class="go-up">
+		<a href="#home">
+			<i class="fa fa-arrow-up" aria-hidden="true"></i>
+		</a>
+	</nav>
 
 	<div class="main">
 
@@ -37,10 +43,12 @@
 					<span class="cl-alizarin to-upper">Sa</span>lerno
 				</h4>
 				<hr/>
-				<a href="https://github.com/darioTecchia" target="_blank"><i class="fa fa-github"></i></a>
-				<a href="https://it.linkedin.com/in/dario-tecchia-3b8934120" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-				<a href="https://www.instagram.com/dariotecchia/" target="_blank"><i class="fa fa-instagram"></i></a>
-				<a href="mailto: dariotecchia@gmail.com"><i class="fa fa-envelope"></i></a>
+				<span class="link-group">
+					<a href="https://github.com/darioTecchia" target="_blank"><i class="fa fa-github"></i></a>
+					<a href="https://it.linkedin.com/in/dario-tecchia-3b8934120" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+					<a href="https://www.instagram.com/dariotecchia/" target="_blank"><i class="fa fa-instagram"></i></a>
+					<a href="mailto: dariotecchia@gmail.com"><i class="fa fa-envelope"></i></a>
+				</span>
 			</div>
 
 			<nav class="info-navbar">
@@ -49,6 +57,7 @@
 				<a href="#projects">Projects</a>
 				<a href="#experiences">Experiences</a>
 			</nav>
+
 		</div>
 
 		<div class="bio section" id="short-bio">
