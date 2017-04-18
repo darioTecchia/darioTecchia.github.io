@@ -79,7 +79,7 @@ hr {
   border: 0;
   height: 1px;
   width: 45%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(215, 26, 33, 0.75), rgba(0, 0, 0, 0));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(34, 167, 240, 0.75), rgba(0, 0, 0, 0));
 }
 
 nav.info-navbar a:hover {
