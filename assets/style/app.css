@@ -87,6 +87,10 @@ nav.info-navbar a:hover {
   color: white;
 }
 
+tr {
+  border-bottom-width: 1px;
+}
+
 nav.info-navbar a {
   -webkit-transition: color 0.5s ease;
   -moz-transition: color 0.5s ease;
@@ -184,12 +188,4 @@ nav.go-up {
 
 .very-good {
   color: #2ECC71 !important;
-}
-
-.invisible {
-  color: #00324d !important;
-}
-
-.invisible a {
-  color: #00324d !important;
 }
