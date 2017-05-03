@@ -1,7 +1,12 @@
+@font-face {
+  font-family: PoiretOne;
+  src: url("../font/PoiretOne-Regular.ttf");
+}
+
 body {
   background-color: #FFF;
   color: #000;
-  font-family: Poiret One, sans-serif;
+  font-family: PoiretOne, sans-serif;
   text-align: center;
   font-weight: bolder;
   margin: 0px;
