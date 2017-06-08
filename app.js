@@ -22,6 +22,7 @@
 
       console.log('AppController');
 
+      // Smooth Scroll
       $(function () {
         $('a[href*="#"]:not([href="#"])').click(function () {
           if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -37,6 +38,7 @@
         });
       });
 
+      // Get skills, projects and experiences from files.
       $http.get("assets/skills.json").then(function (skills) {
         $scope.skills = skills.data;
       });
