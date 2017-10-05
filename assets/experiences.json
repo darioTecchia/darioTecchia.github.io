@@ -1,4 +1,11 @@
 [
+  
+  {
+    "title": "Front-End Developer",
+    "where": "StartUp, Campania, Italy",
+    "description": "Font-End development using HTML5, CSS3, TypeScript, Bootstrap, Angular",
+    "duration": "october 2017 - in progress"
+  },
   {
     "title": "Front-End Developer",
     "where": "StartUp, Campania, Italy",
@@ -8,7 +15,7 @@
   {
     "title": "Front-End Developer",
     "where": "Università degli Studi di Salerno, Campania, Italy",
-    "description": "Font-End development using HTML5, CSS3, JavaScript, Bootstrap, AngularJS",
+    "description": "Font-End development for an academic project using HTML5, CSS3, JavaScript, Bootstrap, AngularJS",
     "duration": "december 2015 - january 2016"
   },
   {
