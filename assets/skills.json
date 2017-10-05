@@ -5,8 +5,18 @@
     "icon": "javascript"
   },
   {
+    "name": "TypeScript",
+    "level": "Low",
+    "icon": "typescript"
+  },
+  {
     "name": "AngularJS",
     "level": "Good",
+    "icon": "angularjs"
+  },
+  {
+    "name": "Angular 2, 4",
+    "level": "Low",
     "icon": "angularjs"
   },
   {
