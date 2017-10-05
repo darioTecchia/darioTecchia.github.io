@@ -1,6 +1,6 @@
 {
   "name": "devicon",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Programming related icons collection",
   "main": "devicon.min.css",
   "scripts": {
@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/konpa/devicon/issues"
   },
-  "homepage": "http://devicon.fr/",
+  "homepage": "http://konpa.github.io/devicon/",
   "devDependencies": {
     "gulp": "^3.8.10",
     "gulp-concat-css": "^2.0.0",
