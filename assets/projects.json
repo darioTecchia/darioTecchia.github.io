@@ -7,13 +7,6 @@
     "wip": true
   },
   {
-    "title": "powergit",
-    "description": "PowerGit is a command line interface program yaourt-like wich allow to find and clone public repositories from GitHub",
-    "url": "https://github.com/darioTecchia/powergit",
-    "language": "PowerShell",
-    "wip": true
-  },
-  {
     "title": "Stadium Management Platform",
     "description": "Java project developed for an Academic Course",
     "url": "https://github.com/darioTecchia/progetto-programmazione-2",
@@ -40,12 +33,5 @@
     "url": "https://github.com/darioTecchia/knowledge-management",
     "language": "Javascript",
     "wip": false
-  },
-  {
-    "title": "power-clone",
-    "description": "That simple script allows you to clone all repositories from a GitHub user",
-    "url": "https://github.com/darioTecchia/power-clone",
-    "language": "PowerShell",
-    "wip": true
   }
 ]
