@@ -10,6 +10,10 @@ body {
   text-align: center;
   font-weight: bolder;
   margin: 0px;
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 a {
@@ -110,7 +114,7 @@ nav.go-up {
   font-size: 2em !important;
   background-color: black !important;
   padding: 5px !important;
-  z-index: 100;
+  z-index: 102  ;
 }
 
 .center { 
@@ -133,7 +137,7 @@ nav.go-up {
 }
 
 .info-navbar {
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   width: 100%;
   height: 9vh;
@@ -169,6 +173,7 @@ nav.go-up {
 .footer {
   font-size: 1.5em;
   margin-top: 5%;
+  padding-bottom: 9vh;
 }
 
 .cl-alizarin {

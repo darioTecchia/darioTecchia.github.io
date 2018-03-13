@@ -13,14 +13,40 @@
     var ac = this;
 
     ac.initialize = initialize;
+    ac.changeCSS = changeCSS;
 
     ac.initialize();
 
     return ac;
 
+    function changeCSS(cssFile, cssLinkIndex) {
+
+      var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("type", "text/css");
+      newlink.setAttribute("href", cssFile);
+
+      document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+    }
+
     function initialize() {
 
       console.log('AppController');
+
+      var isDark = false;
+
+      $scope.toogleDarkMode = function () {
+        $('i.fa-moon').toggleClass('fa-sun');
+        if(!isDark) {
+          changeCSS('assets/style/app_dark.css', 0);
+          isDark = !isDark;
+        } else {
+          changeCSS('assets/style/app.css', 0);
+          isDark = !isDark;
+        }
+      }
 
       // Smooth Scroll
       $(function () {
