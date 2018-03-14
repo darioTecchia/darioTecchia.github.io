@@ -35,15 +35,23 @@
 
       console.log('AppController');
 
+      if (!!localStorage.getItem('darkIsSetted')) {
+        if (localStorage.getItem('darkIsSetted')) {
+          changeCSS('assets/style/app_dark.css', 0);
+        }
+      }
+
       var isDark = false;
 
       $scope.toogleDarkMode = function () {
         $('i.fa-moon').toggleClass('fa-sun');
-        if(!isDark) {
+        if (!isDark) {
+          localStorage.setItem('darkIsSetted', true);
           changeCSS('assets/style/app_dark.css', 0);
           isDark = !isDark;
         } else {
           changeCSS('assets/style/app.css', 0);
+          localStorage.setItem('darkIsSetted', false);
           isDark = !isDark;
         }
       }
