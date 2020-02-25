@@ -1,7 +1,0 @@
-{
-  "name": "personal_site",
-  "version": "1.0.0",
-  "dependencies": {
-    "fullpage.js": "latest"
-  }
-}

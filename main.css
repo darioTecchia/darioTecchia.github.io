@@ -1,11 +1,115 @@
-body {
-  margin: 0px;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@font-face {
+  font-family: Montserrat;
+  src: url(assets/font/Montserrat-Regular.ttf);
 }
 
-.wip {
-  font-size: 10vw;
+body {
+  font-family: Montserrat, OpenSans;
+  font-size: 25px;
+}
+
+.blink{
+  animation:blinkingText 1s infinite;
+}
+
+@keyframes blinkingText{
+  0%  { color: #000;        }
+  49% { color: #000;        }
+  60% { color: transparent;   }
+  99% { color: transparent;   }
+  100%{ color: #000;        }
+}
+
+* {
+  transition: all ease 1s !important;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: white;
+  background-color: black;
+}
+
+#fullpage {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.invert, .navbutton.active {
+  color: white;
+  background-color: black;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.navbutton {
+  font-size: 40px;
+  z-index: 9;
+}
+
+.navbutton.bio {
+  top: 10px;
+  left: 10px;
+}
+
+.navbutton.social {
+  right: 10px;
+  top: 10px;
+}
+
+.navbutton.skills {
+  bottom: 10px;
+  left: 10px;
+}
+
+.navbutton.works {
+  right: 10px;
+  bottom: 10px;
+}
+
+.section {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section.bio {
+}
+
+.section.bio .title {
+  font-size: calc(4vw + 30px);
+}
+
+.section.bio .subtitle {
+  font-size: calc(0.5vw + 20px);
+  font-style: italic;
+  color: #424242;
+}
+
+.education-card {
+}
+
+.education-card img {
+  width: 100px;
+}
+
+.section.social {
+
+}
+
+.section.skills {
+
+}
+
+.section.works {
+
+}
+
+.section.works .work-card {
+  margin-bottom: 20px;
 }

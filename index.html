@@ -3,22 +3,129 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
 
 	<meta name="description"
-		content="Hi! I'm Dario Tecchia, I'm 21 years old and I study Computer Science at the Università degli Studi di Salerno, Italy. I am passionate about web programming."/>
+		content="Hi! I'm Dario Tecchia, I'm 21 years old and I study Computer Science at the Università degli Studi di Salerno, Italy. I am passionate about web programming." />
 
-	<link rel="stylesheet" href="main.css">	
-	<title>Document</title>
+	<link rel="stylesheet" href="lib/fullPage.js/dist/fullpage.css">
+	<link rel="stylesheet" href="main.css">
+	<title>Dario Tecchia</title>
 </head>
 
 <body>
 
-	<div class="wip">
-		WIP
+	<div class="navcorners">
+		<a data-menuanchor="home" href="#home" class="fixed navbutton bio">bio</a>
+		<a data-menuanchor="social" href="#social" class="fixed navbutton social">social</a>
+		<a data-menuanchor="skills" href="#skills" class="fixed navbutton skills">skills</a>
+		<a data-menuanchor="works" href="#works" class="fixed navbutton works">works</a>
+	</div>
+
+	<div id="fullpage">
+		<div class="section bio">
+
+			<div data-anchor="home" class="slide">
+				<div class="title">
+					dario tecchia<span class="blink">_</span>
+				</div>
+				<div class="subtitle">
+					<span><</span>!-- software developer -->
+				</div>
+			</div>
+
+			<div data-anchor="bio" class="slide">
+				<h3>Bio</h3>
+				<div class="bio">
+					My name is Dario Tecchia and I was born in 1994. I currently live in Sorrento, Italy.
+					<br><br>
+					Since I was a child I've been passionate about everything related to computer science.
+					<br><br>
+					I have developed a strong passion for programming since my first year of university.
+				</div>
+			</div>
+
+			<div data-anchor="education" class="slide">
+				<h3>Education</h3>
+				<div class="education">
+					<div class="education-card">
+						<span>2013 - 2019</span><br>
+						<span>Bachelor in Computer Science</span><br>
+						<span><a target="_blank" href="https://github.com/darioTecchia/thesis-degree/raw/master/thesis.pdf">TiveJS: A Javascript application for the recognition of diagrammatic languages</a></span><br>
+						<span>Università degli Studi di Salerno</span>
+					</div>
+					<br>
+					<div class="education-card">
+						<span>2019 - now</span><br>
+						<span>Enrolled in Computer Science - Information systems and software technology</span><br>
+						<span>Università degli Studi di Salerno</span>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="section skills">
+			<h3>Skills</h3>
+			Javascript | PHP | C | Java | Python | HTML5 | CSS3 | NodeJS | MySQL | MongoDB | Express | NodeJS | Angular | VueJS | Bootstrap | jQuery
+			<br><br>
+			Git | GitHub | Bitbucket | Gitlab
+			<br><br>
+			Software Development | Problem Solving
+			<h3>Languages</h3>
+			Italian (native language)
+			<br>
+			English
+
+		</div>
+
+		<div class="section works">
+			<h3>Works</h3>
+
+			<div class="work-card">
+				[Feb 2020 - <a href="dariotecchia.github.io" target="_blank" rel="noopener noreferrer">dariotecchia.github.io</a>]
+				<br>
+				Personal Website
+			</div>
+
+			<div class="work-card">
+				[Dec 2020 - <a href="https://github.com/darioTecchia/COMP_5_SCG" target="_blank" rel="noopener noreferrer">MyPallene</a>]
+				<br>
+				Programming language compiler written for the Compiler course from University.
+			</div>
+
+			<div class="work-card">
+				[Dec 2019 - <a href="https://github.com/darioTecchia/ng-pablo-new" target="_blank" rel="noopener noreferrer">ng-pablo-new</a>]
+				<br>
+				Pablo by buffer rewritten in Angular.
+			</div>
+
+			<div class="work-card">
+				[Apr 2019 - <a href="https://github.com/darioTecchia/drawio" target="_blank" rel="noopener noreferrer">TiveJS</a>]
+				<br>
+				draw.io fork for diagrammatic languages recognition.
+			</div>
+
+			<div class="work-card">
+				[Apr 2019 - <a href="https://github.com/darioTecchia/knowledge-management" target="_blank" rel="noopener noreferrer">Knowledge Management</a>]
+				<br>
+				Web App of Knowledge Management developed for an Academic Course.
+			</div>
+
+		</div>
+		
+		<div class="section social">
+			<a target="_blank" href="https://github.com/darioTecchia">GitHub</a> | 
+			<a target="_blank" href="https://www.facebook.com/dario.tecchia">Facebook</a> | 
+			<a target="_blank" href="https://www.instagram.com/dariotecchia/">Instagram</a> | 
+			<a target="_blank" href="https://www.linkedin.com/in/dario-tecchia-3b8934120/">Linkedin</a> | 
+			<a href="tg://resolve?domain=dariotecchia">Telegram</a>
 	</div>
 
 
+	<script src="lib/fullPage.js/vendors/scrolloverflow.js"></script>
+	<script src="lib/fullPage.js/dist/fullpage.js"></script>
 	<script src="main.js"></script>
 
 </body>
