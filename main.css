@@ -1,11 +1,66 @@
-body {
-  margin: 0px;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@font-face {
+  font-family: "Montserrat";
+  src: url(assets/font/Montserrat-Regular.ttf);
 }
 
-.wip {
-  font-size: 10vw;
+body {
+  font-family: "Montserrat";
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+#fullpage {
+  z-index: -1;
+}
+
+.navbutton.active {
+  letter-spacing: 5px;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.navbutton {
+  font-size: 40px;
+  transition: letter-spacing ease 1s;
+}
+
+.navbutton.bio {
+  top: 10px;
+  left: 10px;
+}
+
+.navbutton.social {
+  right: 10px;
+  top: 10px;
+}
+
+.navbutton.skills {
+  bottom: 10px;
+  left: 10px;
+}
+
+.navbutton.portfolio {
+  right: 10px;
+  bottom: 10px;
+}
+
+.section.bio {
+  text-align: center;
+}
+
+.section.social {
+
+}
+
+.section.skills {
+
+}
+
+.section.portfolio {
+
 }
