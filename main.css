@@ -1,10 +1,11 @@
 body {
   margin: 0px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .wip {
-  text-align: center;
-  font-size: 10vh;
-  margin-top: 40vh;
-  height: 10vh;
+  font-size: 10vw;
 }
