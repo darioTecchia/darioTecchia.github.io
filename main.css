@@ -78,9 +78,6 @@ a:hover {
   margin-bottom: 50px;
 }
 
-.section.bio {
-}
-
 .section.bio .title {
   font-size: calc(4vw + 30px);
 }
@@ -89,25 +86,6 @@ a:hover {
   font-size: calc(0.5vw + 20px);
   font-style: italic;
   color: #424242;
-}
-
-.education-card {
-}
-
-.education-card img {
-  width: 100px;
-}
-
-.section.social {
-
-}
-
-.section.skills {
-
-}
-
-.section.works {
-
 }
 
 .section.works .work-card {
