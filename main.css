@@ -1,10 +1,27 @@
 @font-face {
-  font-family: "Montserrat";
+  font-family: Montserrat;
   src: url(assets/font/Montserrat-Regular.ttf);
 }
 
 body {
-  font-family: "Montserrat";
+  font-family: Montserrat, OpenSans;
+  font-size: 25px;
+}
+
+.blink{
+  animation:blinkingText 1s infinite;
+}
+
+@keyframes blinkingText{
+  0%  { color: #000;        }
+  49% { color: #000;        }
+  60% { color: transparent;   }
+  99% { color: transparent;   }
+  100%{ color: #000;        }
+}
+
+* {
+  transition: all ease 1s !important;
 }
 
 a, a:visited {
@@ -12,12 +29,19 @@ a, a:visited {
   color: black;
 }
 
-#fullpage {
-  z-index: -1;
+a:hover {
+  color: white;
+  background-color: black;
 }
 
-.navbutton.active {
-  letter-spacing: 5px;
+#fullpage {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.invert, .navbutton.active {
+  color: white;
+  background-color: black;
 }
 
 .fixed {
@@ -26,7 +50,7 @@ a, a:visited {
 
 .navbutton {
   font-size: 40px;
-  transition: letter-spacing ease 1s;
+  z-index: 9;
 }
 
 .navbutton.bio {
@@ -49,8 +73,29 @@ a, a:visited {
   bottom: 10px;
 }
 
-.section.bio {
+.section {
   text-align: center;
+}
+
+.section.bio {
+
+}
+
+.section.bio .title {
+  font-size: calc(4vw + 30px);
+}
+
+.section.bio .subtitle {
+  font-size: calc(0.5vw + 20px);
+  font-style: italic;
+  color: #424242;
+}
+
+.education-card {
+}
+
+.education-card img {
+  width: 100px;
 }
 
 .section.social {
