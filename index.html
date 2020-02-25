@@ -1,181 +1,25 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<meta name="description" content="Hi! I'm Dario Tecchia, I'm 21 years old and I study Computer Science at the Università degli Studi di Salerno, Italy. I am passionate about web programming."
-	/>
+	<meta name="description"
+		content="Hi! I'm Dario Tecchia, I'm 21 years old and I study Computer Science at the Università degli Studi di Salerno, Italy. I am passionate about web programming."/>
 
-	<title>Dario Tecchia</title>
-
-	<!-- My App CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/style/app.css" />
-	<link rel="preload" as="style" href="assets/style/app_dark.css"/>
-	<!-- Font Awesome CSS -->
-	<link rel="stylesheet" type="text/css" href="bower_components/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css" />
-	<!-- devicon CSS -->
-	<link rel="stylesheet" type="text/css" href="bower_components/devicon/devicon.min.css" />
-
+	<link rel="stylesheet" href="main.css">	
+	<title>Document</title>
 </head>
 
-<body id="home" ng-app="app" ng-controller="AppController">
+<body>
 
-	<!-- GO-UP ARROW -->
-	<!-- <nav class="go-up">
-		<a href="#home">
-			<i class="fa fa-arrow-up" aria-hidden="true"></i>
-		</a>
-		<a class="toogle-dark">
-			<i class="fa fa-arrow-up" aria-hidden="true"></i>
-		</a>
-	</nav> -->
-
-	<div class="main">
-
-		<div class="info center">
-			<div class="info-body">
-				<h1>DARIO
-					<span class="cl-alizarin">TECCHIA</span>
-				</h1>
-				<hr/>
-				<h4>
-					Un
-					<span class="cl-alizarin">Idiota</span> Qualunque
-					<br /> Computer Science
-					<span class="cl-alizarin">Student</span>
-					<br />
-					<span class="cl-alizarin to-upper">Uni</span>versit&agrave; degli Studi di
-					<span class="cl-alizarin to-upper">Sa</span>lerno
-				</h4>
-				<hr/>
-				<span class="link-group">
-					<a href="https://github.com/darioTecchia" target="_blank">
-						<i class="fab fa-github"></i>
-					</a>
-					<a href="https://it.linkedin.com/in/dario-tecchia-3b8934120" target="_blank">
-						<i class="fab fa-linkedin"></i>
-					</a>
-					<a href="https://www.instagram.com/dariotecchia/" target="_blank">
-						<i class="fab fa-instagram"></i>
-					</a>
-					<a href="mailto: dariotecchia@gmail.com">
-						<i class="fa fa-envelope"></i>
-					</a>
-				</span>
-			</div>
-
-			<!-- NAVBAR -->
-			<nav class="info-navbar">
-				<a href="#short-bio">Bio</a>
-				<a href="#skills">Skills</a>
-				<a href="#projects">Projects</a>
-				<a href="#experiences">Experiences</a>
-				<span>
-					<a href="#home">
-						<i class="fa fa-arrow-up" aria-hidden="true"></i>
-					</a>
-					<a ng-click="toogleDarkMode()" class="toogle-dark">
-						<i class="fas fa-moon" aria-hidden="true"></i>
-					</a>
-				</span>
-			</nav>
-
-		</div>
-
-		<!-- BIO SECTION -->
-		<div class="bio section" id="short-bio">
-			<h1>
-				Short Bio
-			</h1>
-			<p class="bio-body">
-				Hi! I'm Dario
-				<span class="cl-alizarin">Tecchia</span>, I'm 21 years old and I'm Computer Science graduated at the Universit&agrave; degli Studi di Salerno, Italy.
-				<br
-				/> Over the years I have gained particular interest in everything related to front-end development, especially for JavaScript,
-				AngularJS, Angular 2+ and PHP.
-				<br /> This interest has grown by interfacing with the world of work. I worked for a company for about 2 months and then continued
-				my studies.
-				<br />
-			</p>
-		</div>
-
-		<!-- SKILLS SECTION -->
-		<div class="skills section" id="skills">
-			<h1>
-				Skills
-			</h1>
-			<table>
-				<!-- Repeat: skill in skills -->
-				<tr ng-repeat="skill in skills">
-					<td>
-						<i class="devicon-{{skill.icon}}-plain"></i>
-					</td>
-					<td> {{skill.name}} </td>
-					<td class="{{skill.level.toLowerCase()}}">{{skill.level}}</td>
-				</tr>
-			</table>
-
-		</div>
-
-		<!-- GITHUB SECTION -->
-		<div class="git-hub-projects section" id="projects">
-			<h1>
-				Projects
-			</h1>
-			<ul class="projects-list">
-				<li class="project-item" ng-repeat="project in projects">
-					<div>
-						<a ng-href="{{project.url}}" target="_blank">
-							<h2>{{project.title}}</h2>
-						</a>
-						<div ng-if="project.wip" class="cl-alizarin">
-							WORK IN PROGRESS
-							<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-						</div>
-						<div>
-							{{project.description}}
-						</div>
-						<span>{{project.language}}</span>
-					</div>
-				</li>
-			</ul>
-		</div>
-
-		<!-- EXPERIENCES SECTION -->
-		<div class="experiences section" id="experiences">
-			<h1>
-				Experiences
-			</h1>
-			<ul class="experiences-list">
-				<li class="experience-item" ng-repeat="experience in experiences">
-					<div>
-						<h2 class="cl-alizarin">
-							{{experience.title}}
-						</h2>
-						<span>{{experience.where}}</span>
-						<div>
-							{{experience.description}}
-						</div>
-						<span>{{experience.duration}}</span>
-					</div>
-				</li>
-			</ul>
-		</div>
-
+	<div class="wip">
+		WIP
 	</div>
 
-	<!-- FOOTER -->
-	<footer class="footer">
-		made with
-		<i class="cl-alizarin fa fa-heart" aria-hidden="true"></i> riding a unicorn
-	</footer>
 
-	<script src="bower_components/angular/angular.min.js"></script>
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
-
-	<script src="app.js"></script>
+	<script src="main.js"></script>
 
 </body>
 
