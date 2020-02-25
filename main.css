@@ -68,17 +68,17 @@ a:hover {
   left: 10px;
 }
 
-.navbutton.portfolio {
+.navbutton.works {
   right: 10px;
   bottom: 10px;
 }
 
 .section {
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .section.bio {
-
 }
 
 .section.bio .title {
@@ -106,6 +106,10 @@ a:hover {
 
 }
 
-.section.portfolio {
+.section.works {
 
+}
+
+.section.works .work-card {
+  margin-bottom: 20px;
 }

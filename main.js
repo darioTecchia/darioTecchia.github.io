@@ -3,7 +3,7 @@
   'use strict';
 
   var myFullpage = new fullpage('#fullpage', {
-    anchors: ['home', 'skills', 'portfolio', 'social'],
+    anchors: ['home', 'skills', 'works', 'social'],
     menu: '.navcorners',
     scrollOverflow:true,
     controlArrows: false
