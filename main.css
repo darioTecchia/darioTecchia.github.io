@@ -8,8 +8,16 @@ body {
   font-size: 25px;
 }
 
+h3 {
+  font-size: 35px;
+}
+
 .blink{
   animation:blinkingText 1s infinite;
+}
+
+.mobile-only {
+  display: none;
 }
 
 @keyframes blinkingText{
@@ -53,7 +61,7 @@ a:hover {
   z-index: 9;
 }
 
-.navbutton.bio {
+.navbutton.home {
   top: 10px;
   left: 10px;
 }
@@ -78,11 +86,11 @@ a:hover {
   margin-bottom: 50px;
 }
 
-.section.bio .title {
+.section.home .title {
   font-size: calc(4vw + 30px);
 }
 
-.section.bio .subtitle {
+.section.home .subtitle {
   font-size: calc(0.5vw + 20px);
   font-style: italic;
   color: #424242;
@@ -90,4 +98,26 @@ a:hover {
 
 .section.works .work-card {
   margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 425px) {
+  h3 {
+    font-size: 25px;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: unset;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  .navbutton {
+    font-size: 30px;
+  }
 }
