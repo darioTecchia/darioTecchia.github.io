@@ -6,8 +6,8 @@
     anchors: ['home', 'skills', 'works', 'social'],
     menu: '.navcorners',
     scrollOverflow: true,
-    controlArrows: false
-    // licenseKey: 'YOUR_KEY_HERE'
+    controlArrows: false,
+    licenseKey: 'S2BJ$LJ?t8'
   });
 
-})()
+})();

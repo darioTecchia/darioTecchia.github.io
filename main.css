@@ -16,6 +16,10 @@ h3 {
   animation:blinkingText 1s infinite;
 }
 
+.mobile-only {
+  display: none;
+}
+
 @keyframes blinkingText{
   0%  { color: #000;        }
   49% { color: #000;        }
@@ -101,9 +105,18 @@ a:hover {
     font-size: 25px;
   }
 
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: unset;
+  }
+
   body {
     font-size: 15px;
   }
+
   .navbutton {
     font-size: 30px;
   }
