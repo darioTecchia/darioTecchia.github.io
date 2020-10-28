@@ -1,123 +1,56 @@
-@font-face {
-  font-family: Montserrat;
-  src: url(assets/font/Montserrat-Regular.ttf);
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: 'Quicksand';
+    src: url(assets/font/Quicksand-VariableFont_wght.ttf) format('truetype supports variations'),
+         url(assets/font/Quicksand-VariableFont_wght.ttf) format('truetype-variations');
+    font-weight: 300 700;
+    font-stretch: 25% 151%;
+  }
+}
+
+:root {
+  --ani-timing: cubic-bezier(0.250, 0.250, 0.750, 0.750);
 }
 
 body {
-  font-family: Montserrat, OpenSans;
-  font-size: 25px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Quicksand';
+  font-weight: 300;
+  background-color: #f9f9f9;
+  margin: 0px;
 }
-
-h3 {
-  font-size: 35px;
-}
-
-.blink{
-  animation:blinkingText 1s infinite;
-}
-
-.mobile-only {
-  display: none;
-}
-
-@keyframes blinkingText{
-  0%  { color: #000;        }
-  49% { color: #000;        }
-  60% { color: transparent;   }
-  99% { color: transparent;   }
-  100%{ color: #000;        }
-}
-
-* {
-  transition: all ease 1s !important;
-}
-
 a, a:visited {
+  color: inherit;
   text-decoration: none;
-  color: black;
 }
-
-a:hover {
-  color: white;
-  background-color: black;
+.ani {
+  -webkit-transition: all 500ms var(--ani-timing);
+  -moz-transition: all 500ms var(--ani-timing);
+  -o-transition: all 500ms var(--ani-timing);
+  transition: all 500ms var(--ani-timing);
 }
-
-#fullpage {
-  margin-left: 20px;
-  margin-right: 20px;
+.card {
+  border-radius: 8px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.10);
+  padding: 16px;
 }
-
-.invert, .navbutton.active {
-  color: white;
-  background-color: black;
+.card.hov {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10);
 }
-
-.fixed {
-  position: fixed;
+.card.hov:hover {
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.10);
 }
-
-.navbutton {
-  font-size: 40px;
-  z-index: 9;
-}
-
-.navbutton.home {
-  top: 10px;
-  left: 10px;
-}
-
-.navbutton.social {
-  right: 10px;
-  top: 10px;
-}
-
-.navbutton.skills {
-  bottom: 10px;
-  left: 10px;
-}
-
-.navbutton.works {
-  right: 10px;
-  bottom: 10px;
-}
-
-.section {
+.txt--center {
   text-align: center;
-  margin-bottom: 50px;
 }
 
-.section.home .title {
-  font-size: calc(4vw + 30px);
+b, .bold {
+  font-weight: 500;
 }
-
-.section.home .subtitle {
-  font-size: calc(0.5vw + 20px);
-  font-style: italic;
-  color: #424242;
-}
-
-.section.works .work-card {
-  margin-bottom: 20px;
-}
-
-@media only screen and (max-width: 425px) {
-  h3 {
-    font-size: 25px;
-  }
-
-  .desktop-only {
-    display: none;
-  }
-
-  .mobile-only {
-    display: unset;
-  }
-
-  body {
-    font-size: 15px;
-  }
-
-  .navbutton {
-    font-size: 30px;
-  }
+h1, .h1 {
+  font-weight: unset;
 }
