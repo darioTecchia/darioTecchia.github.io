@@ -1,0 +1,30 @@
+{
+  "name": "dariotecchia.github.io",
+  "version": "0.0.1",
+  "description": "Personal website",
+  "main": "script/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darioTecchia/darioTecchia.github.io.git"
+  },
+  "keywords": [
+    "website",
+    "portfolio"
+  ],
+  "author": "Dario Tecchia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darioTecchia/darioTecchia.github.io/issues"
+  },
+  "homepage": "https://github.com/darioTecchia/darioTecchia.github.io#readme",
+  "dependencies": {
+    "jquery": "3.5.1",
+    "gsap": "3.5.1"
+  }
+}

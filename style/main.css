@@ -1,0 +1,70 @@
+:root {
+  --background: #212121;
+  --text: #fff;
+  --primary: #ffa000;
+  --secondary: #CC0000;
+}
+
+body {
+  font-size: 10pt;
+  line-height: 14pt;
+  margin: 0 4em;
+  font-family: monospace;
+
+  background-color: var(--background);
+  color: var(--text);
+
+  width: 730px;
+}
+
+header {
+  background-color: black;
+  padding: 2px;
+}
+
+a, a:visited {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.txt--right {
+  text-align: right;
+}
+.txt--center {
+  text-align: center;
+}
+.txt--left {
+  text-align: left;
+}
+.txt--uppercase {
+  text-transform: uppercase;
+}
+.txt--capitalize {
+  text-transform: capitalize;
+}
+.primary {
+  color: var(--primary);
+}
+.secondary {
+  color: var(--secondary);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main {
+  padding: 2px;
+}
+
+section .title {
+  font-weight: bold;
+}
+section .body {
+  padding-left: 2em;
+}
+
+#toggle-dark-light {
+  cursor: pointer;
+}
