@@ -16,13 +16,15 @@
         let dataCursor = $(this).attr('data-cursor');
         console.log(dataCursor);
         gsap.to("#cursor", {
-          width: 64,
-          height: 64,
-          top: -32,
-          left: -32
+          width: 128,
+          height: 128,
+          top: -64,
+          left: -64,
+          borderRadius: 0
         });
         $("#cursor").css({
-          backgroundImage: `url(${dataCursor})`
+          backgroundImage: `url(${dataCursor})`,
+          backgroundColor: 'transparent'
         })
       },
       function (e) {
@@ -30,10 +32,12 @@
           width: 20,
           height: 20,
           top: -10,
-          left: -10
+          left: -10,
+          borderRadius: '50%'
         });
         $("#cursor").css({
-          backgroundImage: `unset`
+          backgroundImage: `unset`,
+          backgroundColor: 'rgb(235, 233, 85)'
         })
       }
     );
