@@ -5,6 +5,31 @@
   --secondary: #CC0000;
 }
 
+#cursor-wrapper {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+
+  z-index: -1;
+}
+
+#cursor {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  
+  transform: translate(50%, 50%);
+
+  top: -10px;
+  left: -10px;
+
+  border-radius: 50%;
+
+  background-color: rgb(235, 233, 85);
+}
+
 body {
   font-size: 10pt;
   line-height: 14pt;
@@ -67,4 +92,13 @@ section .body {
 
 #toggle-dark-light {
   cursor: pointer;
+}
+
+.responsive-bg {
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
