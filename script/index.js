@@ -4,7 +4,24 @@
 
   $(document).ready(function () {
 
-    $(document).mousemove(function(e) {
+    setTimeout(() => {
+      $('body').addClass('loaded');
+    }, 800);
+
+    gsap.to("#cursor", {
+      opacity: 1
+    });
+
+    TweenMax.staggerTo(".work", 1, {
+      opacity: 1,
+      x: 0
+    }, .2);
+
+    var skills = $('.skill').toArray();
+    skills.sort(function () { return 0.5 - Math.random() });
+    TweenMax.staggerTo(skills, 0.3, { autoAlpha: 1, ease: Quad.easeInOut }, 0.1);
+
+    $(document).mousemove(function (e) {
       gsap.to("#cursor", {
         x: e.clientX,
         y: e.clientY
@@ -14,7 +31,6 @@
     $('*[cursor]').hover(
       function (e) {
         let dataCursor = $(this).attr('data-cursor');
-        console.log(dataCursor);
         gsap.to("#cursor", {
           width: 128,
           height: 128,
@@ -41,7 +57,12 @@
         })
       }
     );
-  })
 
+    $('#toggle-dark-light').on('click', switchTheme);
 
+    function switchTheme() {
+      document.documentElement.toggleAttribute('dark');
+    }
+
+  });
 })();
