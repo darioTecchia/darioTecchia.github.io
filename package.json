@@ -25,6 +25,6 @@
   "homepage": "https://github.com/darioTecchia/darioTecchia.github.io#readme",
   "dependencies": {
     "jquery": "3.5.1",
-    "gsap": "3.5.1"
+    "gsap": "3.6.0"
   }
 }
