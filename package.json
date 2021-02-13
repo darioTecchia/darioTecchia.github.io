@@ -1,30 +1,22 @@
 {
   "name": "dariotecchia.github.io",
-  "version": "0.0.1",
-  "description": "Personal website",
-  "main": "script/index.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/darioTecchia/darioTecchia.github.io.git"
+    "url": "git://github.com/darioTecchia/darioTecchia.github.io"
   },
-  "keywords": [
-    "website",
-    "portfolio"
-  ],
-  "author": "Dario Tecchia",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/darioTecchia/darioTecchia.github.io/issues"
-  },
-  "homepage": "https://github.com/darioTecchia/darioTecchia.github.io#readme",
+  "keywords": [],
+  "author": "Codrops",
+  "license": "MIT",
+  "homepage": "[HOMEPAGE]",
   "dependencies": {
-    "jquery": "3.5.1",
-    "gsap": "3.6.0"
+    "gsap": "^3.5.1",
+    "imagesloaded": "^4.1.4",
+    "splitting": "^1.0.6",
+    "vue": "^3.0.5",
+    "requirejs": "2.3.6",
+    "jquery": "3.5.1"
   }
 }
