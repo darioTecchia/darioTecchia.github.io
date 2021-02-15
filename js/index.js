@@ -10,8 +10,10 @@ const app = Vue.createApp({
 
     console.log('mounted');
 
+    lazyload();
+
     // Preload images and fonts
-    Promise.all([preloader('.menu__item'), preloadImages('.gallery__item-imginner'), preloadFonts('zkq2mjw')]).then(() => {
+    Promise.all([preloadFonts('zkq2mjw')]).then(() => {
       // Remove loader (loading class)
       document.body.classList.remove('loading');
 

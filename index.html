@@ -71,17 +71,16 @@
           <span class="content__title-wrap"><span class="content__title-inner">{{job.name}}</span></span>
           <sup class="content__title-number">({{index}})</sup>
         </h2>
+        <div class="gallery__item-caption">
+          <h3 class="gallery__item-title" data-splitting>{{job.description}}</h3>
+          <p class="gallery__item-meta">{{job.date}}</p>
+        </div>
         <div class="gallery">
           <figure class="gallery__item" v-for="(media, index) in job.medias">
             <div class="gallery__item-img">
-              <img class="gallery__item-imginner" :src="media" alt="" srcset="">
+              <img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" class="lazyload gallery__item-imginner" :data-src="media" width="33%">
             </div>
           </figure>
-          <div class="gallery__item-caption">
-            <h3 class="gallery__item-title" data-splitting>{{job.description}}</h3>
-            <p class="gallery__item-meta">{{job.date}}</p>
-            </figcaption>
-          </div>
         </div>
       </div>
 
@@ -90,17 +89,16 @@
           <span class="content__title-wrap"><span class="content__title-inner">About</span></span>
           <sup class="content__title-number">({{jobs.length + 1}})</sup>
         </h2>
+        <div class="gallery__item-caption">
+          <h3 class="gallery__item-title" data-splitting>Dario Tecchia</h3>
+          <p class="gallery__item-meta">{{about}}</p>
+        </div>
         <div class="gallery">
           <figure class="gallery__item">
             <div class="gallery__item-img">
               <img class="gallery__item-imginner" src="img/me.jpg" alt="" srcset="">
             </div>
           </figure>
-          <div class="gallery__item-caption">
-            <h3 class="gallery__item-title" data-splitting>Dario Tecchia</h3>
-            <p class="gallery__item-meta">{{about}}</p>
-            </figcaption>
-          </div>
         </div>
       </div>
 
@@ -109,17 +107,16 @@
           <span class="content__title-wrap"><span class="content__title-inner">Skills</span></span>
           <sup class="content__title-number">({{jobs.length + 2}})</sup>
         </h2>
+        <div class="gallery__item-caption">
+          <h3 class="gallery__item-title">{{skills}}</h3>
+          <p class="gallery__item-meta">{{skills}}</p>
+        </div>
         <div class="gallery">
           <figure class="gallery__item">
             <div class="gallery__item-img">
               <img class="gallery__item-imginner" src="img/me.jpg" alt="" srcset="">
             </div>
           </figure>
-          <div class="gallery__item-caption">
-            <h3 class="gallery__item-title">{{skills}}</h3>
-            <p class="gallery__item-meta">{{skills}}</p>
-            </figcaption>
-          </div>
         </div>
       </div>
 
@@ -135,12 +132,12 @@
     <circle class="cursor__inner" cx="15" cy="15" r="7.5" />
   </svg>
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/lazyload/lazyload.min.js"></script>r
   <script src="node_modules/splitting/dist/splitting.min.js"></script>
   <script src="js/fakeDb.js"></script>
   <script src="https://unpkg.com/vue@next"></script>
-  <script src="node_modules/imagesloaded/imagesloaded.pkgd.js"></script>
-  <script src="node_modules/gsap/dist/gsap.js"></script>
-  <script src="node_modules/requirejs/require.js"></script>
+  <script src="node_modules/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="node_modules/gsap/dist/gsap.min.js"></script>
   <script src="js/utils.js"></script>
   <script src="js/preloader.js"></script>
   <script src="js/cursor.js"></script>
