@@ -13,10 +13,7 @@
   "homepage": "[HOMEPAGE]",
   "dependencies": {
     "gsap": "^3.5.1",
-    "imagesloaded": "^4.1.4",
-    "splitting": "^1.0.6",
     "vue": "^3.0.5",
-    "requirejs": "2.3.6",
     "jquery": "3.5.1",
     "lazyload": "2.0.0-rc.2"
   }

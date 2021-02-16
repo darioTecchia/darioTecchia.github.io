@@ -42,7 +42,7 @@ const fakedb = {
       date: "Sep 2020",
       description: "Webiste for Fondo Restaurant.",
       url: "https://www.fondoristorante.it/",
-      medias: ["img/fnd/1.gif", "img/fnd/2.png"],
+      medias: ["img/fnd/2.png"],
       logo: "img/fnd/fnd.svg"
     },
     // {
@@ -81,6 +81,6 @@ const fakedb = {
       logo: "img/mila/mila.png"
     },
   ],
-  skills: ["php", "javascript", "mongodb"],
+  skills: ["PHP", "MySQL", "Javascript", "HTML5", "CSS3", "Typescript", "NodeJS", "MongoDB", "VueJS", "NuxtJS", "AngularJS", "Angular", "Python", "Express", "Git", "GitHub", "Bitbucket", "GitLab", "Java"],
   about: "Ciao mondo!"
 }

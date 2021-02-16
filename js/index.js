@@ -1,3 +1,18 @@
+const tl = new TimelineLite();
+
+const init = () => {
+
+  console.log('mounted');
+  $('[lazy-load]').lazyload();
+
+  setTimeout(() => {
+    tl.to('#preload', { duration: .20, x: "-100%", ease: 'linear' }).add(() => {
+      $('body').removeClass('loading');
+    })
+  }, 1000);
+
+}
+
 const app = Vue.createApp({
   data() {
     return {
@@ -7,29 +22,9 @@ const app = Vue.createApp({
     }
   },
   mounted: () => {
-
-    console.log('mounted');
-
-    lazyload();
-
-    // Preload images and fonts
-    Promise.all([preloadFonts('zkq2mjw')]).then(() => {
-      // Remove loader (loading class)
-      document.body.classList.remove('loading');
-
-      // Initialize custom cursor
-      const cursor = new Cursor(document.querySelector('.cursor'));
-
-      // Initialize the MenuController
-      new MenuController(document.querySelector('.menu'));
-
-      // Mouse effects on all links and buttons
-      [...document.querySelectorAll('a, .back')].forEach(link => {
-        link.addEventListener('mouseenter', () => cursor.enter());
-        link.addEventListener('mouseleave', () => cursor.leave());
-      });
-    });
+    init();
   }
 });
 
-app.mount('#main')
+app.mount('#app')
+
