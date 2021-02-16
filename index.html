@@ -23,7 +23,12 @@
   <div id="preload">
     <span class="glitch">Loading</span>
   </div>
+
   <div id="cursor"></div>
+
+	<div id="full-image">
+		<img src="" alt="">
+	</div>
 
   <main id="app">
     <section class="about-section">
@@ -37,14 +42,18 @@
           <div>
             {{about.body}}
           </div>
-          <br><br>
+          <br>
           <h4 class="about-title">educations</h4>
           <div class="about-pic-wrapper">
             <img src="img/unisa.png" alt="" lazy-load>
           </div>
+					<br>
           <div>
             {{about.educations}}
           </div>
+					<div>
+						<b><a href="https://github.com/darioTecchia/Degree-Thesis/raw/master/thesis.pdf" target="_blank" rel="noopener noreferrer">Link to the thesis</a>.</b>
+					</div>
         </div>
       </div>
     </section>
@@ -64,7 +73,7 @@
         <div class="work" v-for="work in works">
           <h4 class="info"> <a :href="work.url" target="_blank" rel="noopener noreferrer">{{work.name}}</a> • {{work.description}} • {{work.committee}}</h4>
           <div class="media-wrapper">
-            <img lazy-load :data-src="media" v-for="media in work.medias" alt="" srcset="">
+            <img fullable lazy-load :data-src="media" v-for="media in work.medias" alt="" srcset="">
           </div>
         </div>
       </div>

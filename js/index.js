@@ -16,6 +16,16 @@ const init = () => {
       $('section').removeClass('open');
     }
     $(this).closest('section').toggleClass('open');
+  });
+
+  $('[fullable]').click(function() {
+    $('body').addClass('full-image')
+    console.log($(this).attr('src'));
+    $('#full-image img').attr('src', $(this).attr('src'));
+  })
+
+  $('#full-image').click(function() {
+    $('body').removeClass('full-image')
   })
 
 }
