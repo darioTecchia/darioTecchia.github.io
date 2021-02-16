@@ -50,6 +50,9 @@
 
 :root {
 	--normalfont: 12px/20px 'Bottega Veneta',Arial,Helvetica,sans-serif;
+
+	--hpad: calc(var(--pad) * .5);
+	--pad: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 { margin: 0px; padding: 0px; }
@@ -99,7 +102,7 @@ body {
   height: var(--size);
   width: var(--size);
   /* background-color: #000; */
-	border: 2px solid var(--color-menuItem-hover);
+	border: 1px solid var(--color-menuItem-hover);
   border-radius: 50%;
   transform: translate3d(
     calc(100vw * var(--cursor-x) - var(--size) / 2), 
@@ -149,7 +152,7 @@ main > section:last-child {
 	border-bottom: 0px solid var(--color-menuItem-hover);
 }
 
-main > section:hover {
+main > section.open {
 	flex: 30;
 }
 
@@ -159,28 +162,39 @@ main > section .title {
 	border-bottom: 1px solid transparent;
 	padding: 17px 0px 16px;
 	line-height: 14px;
-	width: 100%;
+	/* width: 100%; */
 	text-align: center;
-	margin: auto 0px;
+	margin: auto;
+
+	cursor: pointer;
 }
 
-main > section:hover .title {
+main > section .title span:nth-child(2),
+main > section.open .title span:nth-child(3) {
+	display: inline;
+}
+
+main > section.open .title span:nth-child(2),
+main > section .title span:nth-child(3) {
+	display: none;
+}
+
+main > section.open .title {
 	border-color: var(--color-menuItem-hover);
-	-webkit-animation: glitch 6s infinite steps(50);
-          animation: glitch 6s infinite steps(50);
+	width: 100%;
 }
 
 main > section .content {
 	opacity: 0;
 	height: 0%;
 	transition: all .3s ease;
-	padding: 20px;
+	padding: var(--pad);
 	display: none;
 	overflow: auto;
 	width: 100%;
 }
 
-main > section:hover .content {
+main > section.open .content {
 	display: block;
 	height: 100%;
 	opacity: 1;
@@ -188,12 +202,36 @@ main > section:hover .content {
 /* main end */
 
 /* jobs */
+.jobs-section .content {
+	padding: 0px;
+}
+
+.job .media-wrapper {
+	padding: var(--pad);
+}
+
 .job img {
 	width: 33%;
 	cursor: pointer;
 	opacity: 0;
 	transition: opacity .3s ease;
 	transition-delay: .5s;
+}
+
+.job h4 {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  padding: 17px 0px 16px;
+  line-height: 14px;
+  width: 100%;
+  text-align: center;
+  margin: auto 0px;
+	border-bottom: 1px solid var(--color-menuItem-hover);
+	border-top: 1px solid var(--color-menuItem-hover);
+}
+
+.job:first-child h4 {
+  border-top: 0px solid transparent;
 }
 
 .job img[src] {
@@ -232,3 +270,12 @@ main > section:hover .content {
 	border-bottom: 0px solid var(--color-menuItem-hover);
 }
 /* skills end */
+
+/* about */
+.about-section .content {
+	padding: 0px var(--pad);
+	max-width: 50%;
+	border-left: 1px solid var(--color-menuItem-hover);
+	border-right: 1px solid var(--color-menuItem-hover);
+}
+/* about end */

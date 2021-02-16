@@ -82,5 +82,8 @@ const fakedb = {
     },
   ],
   skills: ["PHP", "MySQL", "Javascript", "HTML5", "CSS3", "Typescript", "NodeJS", "MongoDB", "VueJS", "NuxtJS", "AngularJS", "Angular", "Python", "Express", "Git", "GitHub", "Bitbucket", "GitLab", "Java"],
-  about: "Ciao mondo!"
+  about:  { 
+    body: "My name is Dario Tecchia, I was born on September 16, 1994 and currently live in Sorrento, Italy. Since childhood I have developed a great passion for the computer world. I am particularly attracted by web technologies and frontend development. I currently work occasionally with [Nebula7] with whom I have developed some websites.",
+    name: "Dario Tecchia",
+  }
 }

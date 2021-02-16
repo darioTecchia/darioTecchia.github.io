@@ -29,32 +29,36 @@
 
   <main id="app">
     <section class="about-section">
-      <h4 class="title">About</h4>
+      <h4 class="title"><span class="glitch">About</span> [<span>+</span><span>-</span>]</h4>
       <div class="content">
-        <span v-for="job in jobs">{{job}}</span>
+        <div class="about-body">
+          {{about.body}}
+        </div>
       </div>
     </section>
     <section class="skills-section">
-      <h4 class="title">Skills</h4>
+      <h4 class="title"><span class="glitch">Skills</span> [<span>+</span><span>-</span>]</h4>
       <div class="content">
         <div class="skills">
-          <h4 v-for="skill in skills" class="skill">{{skill}}</h4>
-          <h4 class="empty skill"></h4>
-          <h4 class="empty skill"></h4>
+          <div v-for="skill in skills" class="skill">{{skill}}</div>
+          <div class="empty skill"></div>
+          <div class="empty skill"></div>
         </div>
       </div>
     </section>
     <section class="jobs-section">
-      <h4 class="title">Jobs</h4>
+      <h4 class="title"><span class="glitch">Jobs</span> [<span>+</span><span>-</span>]</h4>
       <div class="content">
-        <span class="job" v-for="job in jobs">
-          <h4> <a :href="job.url" target="_blank" rel="noopener noreferrer">{{job.name}}</a> • {{job.description}} • {{job.committee}}</h4>
-          <img lazy-load :data-src="media" v-for="media in job.medias" alt="" srcset="">
-        </span>
+        <div class="job" v-for="job in jobs">
+          <h4 class="info"> <a :href="job.url" target="_blank" rel="noopener noreferrer">{{job.name}}</a> • {{job.description}} • {{job.committee}}</h4>
+          <div class="media-wrapper">
+            <img lazy-load :data-src="media" v-for="media in job.medias" alt="" srcset="">
+          </div>
+        </div>
       </div>
     </section>
     <section class="contact-section">
-      <h4 class="title">contact</h4>
+      <h4 class="title"><span class="glitch">Contact</span> [<span>+</span><span>-</span>]</h4>
       <div class="content">
         ciao mondo
       </div>
