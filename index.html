@@ -31,7 +31,7 @@
 	</div>
 
   <main id="app">
-    <section class="about-section">
+    <section class="about-section open">
       <h4 class="title"><span class="glitch">About</span> [<span>+</span><span>-</span>]</h4>
       <div class="content maxw">
         <div class="about-body">
@@ -57,14 +57,13 @@
         </div>
       </div>
     </section>
-    <section class="skills-section">
+    <section v-if="false" class="skills-section">
       <h4 class="title"><span class="glitch">Skills</span> [<span>+</span><span>-</span>]</h4>
       <div class="content maxw">
-        <div class="skills">
-          <div v-for="skill in skills" class="skill">{{skill}}</div>
-          <div class="empty skill"></div>
-          <div class="empty skill"></div>
-        </div>
+        <span class="skill" v-for="skill in skills">
+          <b>{{skill}}</b>
+          • 
+        </span>
       </div>
     </section>
     <section class="works-section">
