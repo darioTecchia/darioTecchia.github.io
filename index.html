@@ -1,189 +1,98 @@
 <!DOCTYPE html>
-<html lang="en" dark>
+<html lang="en" class="no-js">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0">
-	<meta name="format-detection" content="telephone=no">
-
-	<meta name="description" content="My name is Dario Tecchia, I was born on September 16, 1994 and currently live in Sorrento, Italy.
-	Since childhood I have developed a great passion for the computer world.
-	I am particularly attracted by web technologies and frontend development." />
-
-	<link rel="stylesheet" href="/style/main.css">
-	<link rel="stylesheet" href="/style/query.css">
-	<title>Dario Tecchia</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dario Tecchia</title>
+  <meta name="author" content="Dario Tecchia" />
+  <meta name="description" content="My name is Dario Tecchia, I was born on September 16, 1994 and currently live in Sorrento, Italy. Since childhood I have developed a great passion for the computer world. I am particularly attracted by web technologies and frontend development. I currently work occasionally with [Nebula7] with whom I have developed some websites." />
+  <meta name="keywords" content="layout, web design, html, animation, hover effect, menu, gallery layout, css" />
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/keyframes.css" />
+  <link rel="stylesheet" type="text/css" href="css/base.css" />
+  <link rel="stylesheet" type="text/css" href="css/cquery.css" />
+  <script>
+    document.documentElement.className = "js";
+    var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
+    supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+  </script>
 </head>
 
-<body class="dark">
+<body id="appa" class="loading">
+  <div id="preload">
+    <span class="glitch">Loading</span>
+  </div>
+  <div id="cursor"></div>
 
-	<div id="cursor-wrapper">
-		<div id="cursor" class="responsive-bg"></div>
-	</div>
+  <main id="app">
+    <section class="about-section">
+      <h4 class="title"><span class="glitch">About</span> [<span>+</span><span>-</span>]</h4>
+      <div class="content maxw">
+        <div class="about-body">
+          {{about.body}}
+        </div>
+      </div>
+    </section>
+    <section class="skills-section">
+      <h4 class="title"><span class="glitch">Skills</span> [<span>+</span><span>-</span>]</h4>
+      <div class="content maxw">
+        <div class="skills">
+          <div v-for="skill in skills" class="skill">{{skill}}</div>
+          <div class="empty skill"></div>
+          <div class="empty skill"></div>
+        </div>
+      </div>
+    </section>
+    <section class="jobs-section">
+      <h4 class="title"><span class="glitch">Jobs</span> [<span>+</span><span>-</span>]</h4>
+      <div class="content">
+        <div class="job" v-for="job in jobs">
+          <h4 class="info"> <a :href="job.url" target="_blank" rel="noopener noreferrer">{{job.name}}</a> • {{job.description}} • {{job.committee}}</h4>
+          <div class="media-wrapper">
+            <img lazy-load :data-src="media" v-for="media in job.medias" alt="" srcset="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-section">
+      <h4 class="title"><span class="glitch">Contact</span> [<span>+</span><span>-</span>]</h4>
+      <div class="content maxw">
+        <b>Keep in touch: </b>
+        <a href="https://github.com/darioTecchia" target="_blank" rel="noopener noreferrer">GitHub</a>
+        •
+        <a href="https://www.linkedin.com/in/dario-tecchia-3b8934120/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+        <br>
+        <b>Social: </b>
+        <a href="https://www.facebook.com/dario.tecchia" target="_blank" rel="noopener noreferrer">Facebook</a>
+        •
+        <a href="https://www.instagram.com/dariotecchia/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <br>
+        <br>
+        <b>or send me ad email</b>
+        <br>
+        <div class="input-g">
+          <label for="subject"> <b>subject</b> </label>
+          <input v-model="subject" placeholder="SUBJECT" type="text" name="subject" id="subject">
+        </div>
+        <div class="input-g">
+          <label for="request"> <b>request</b> </label>
+          <textarea v-model="request" name="request" id="request" cols="30" rows="5">Hi Dario! </textarea>
+        </div>
+        <div class="input-g submit">
+          <a :class="{ disabled: !(request.length && subject.length) }" :href="maillink">[send]</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-	<header>
-		<nav>
-			[<a href="https://github.com/dariotecchia" target="_blank">github</a>]
-			[<a href="https://www.linkedin.com/in/dario-tecchia-3b8934120/" target="_blank">linkedin</a>]
-			[<a href="mailto:dariotecchia@gmail.com" target="_blank">mail</a>]
-		</nav>
-		<br>
-		<div class="row">
-			<span>PORTFOLIO</span><span>Last update:</span>
-		</div>
-		<div class="row">
-			<span></span><span>October 2020</span>
-		</div>
-		<br>
-		<div class="row">
-			<span></span><span>[<span class="primary" id="toggle-dark-light">light mode</span>]</span>
-		</div>
-	</header>
-
-	<br>
-
-	<div class="main">
-		<div class="row">
-			<span>Dario Tecchia</span><span>Date of birth</span>
-		</div>
-		<div class="row">
-			<span>Software Developer</span><span>September 1994</span>
-		</div>
-		<br>
-
-		<section class="bio">
-			<div class="title">1. bio</div>
-			<br>
-			<div class="body">
-				My name is <span data-cursor="/assets/image/me.jpg" class="secondary">Dario Tecchia</span>, I was born on 
-				September 16, 1994 and currently live in Sorrento, Italy.
-				Since <span class="secondary" cursor data-cursor="/assets/image/child.jpg">childhood</span> I have developed a great passion for the computer world.
-				I am particularly attracted by web technologies and frontend development.
-				<br>
-				I currently work occasionally with [<a href="https://nbl7.net/" target="_blank" cursor data-cursor="/assets/image/nbl7.svg">Nebula7</a>]
-				with whom I have developed some websites.
-			</div>
-		</section>
-		<br>
-
-		<section class="education">
-			<div class="title">2. education</div>
-			<br>
-			<div class="body" cursor data-cursor="/assets/image/unisa.png">
-				2013 ~ 2019 <br>
-				Bachelor in Computer Science <br>
-				University of Salerno <br>
-				<br>
-				2019 ~ Now <br>
-				Master's degree in Computer Science <br>
-				Curricula Software Engineering and IT Management <br>
-				University of Salerno <br>
-			</div>
-		</section>
-		<br>
-
-		<section class="skills">
-			<div class="title">3. skills</div>
-			<br>
-			<div class="body">
-				<span class="skill">PHP</span>
-				<span class="skill">MySQL</span>
-				<span class="skill">Javascript</span>
-				<span class="skill">HTML5</span>
-				<span class="skill">CSS3</span>
-				<span class="skill">Typescript</span>
-				<span class="skill">NodeJS</span>
-				<span class="skill">MongoDB</span>
-				<span class="skill">VueJS</span>
-				<span class="skill">NuxtJS</span>
-				<span class="skill">AngularJS</span>
-				<span class="skill">Angular</span>
-				<span class="skill">Python</span>
-				<span class="skill">Express</span>
-				<span class="skill">Git</span>
-				<span class="skill">GitHub</span>
-				<span class="skill">Bitbucket</span>
-				<span class="skill">GitLab</span>
-				<span class="skill">Java</span>
-			</div>
-		</section>
-		<br>
-
-		<section class="works">
-			<div class="title">4. works and experiences</div>
-			<br>
-			<div class="body">
-				<div cursor class="work" data-cursor="/assets/image/htlmf.svg">
-					Dec 2020 ~ <a href="https://hotelmarinafinale.it/" target="_blank">Hotel Marina</a><br>
-					Website for Hotel Marina Charming Rooms. <br>
-					[<a href="https://nbl7.net/" target="_blank">Nebula7</a>]
-				</div>
-				<br>
-				<div cursor class="work" data-cursor="/assets/image/nssn.svg">
-					Nov 2020 ~ <a href="https://noseason.studiopesca.com/" target="_blank">No Season</a><br>
-					Website for Studio Pesca No Season. <br>
-					[<a href="https://nbl7.net/" target="_blank">Nebula7</a>]
-				</div>
-				<br>
-				<div cursor class="work" data-cursor="/assets/image/cdlp.svg">
-					Oct 2020 ~ <a href="https://cdlifepharma.com/" target="_blank">CDLifePharma</a><br>
-					Addition of ecommerce section for CDLifePharma. <br>
-					[<a href="https://nbl7.net/" target="_blank">Nebula7</a>]
-				</div>
-				<br>
-				<div cursor class="work" data-cursor="/assets/image/hb.svg">
-					Sep 2020 ~ <a href="https://hbproduction.org/it/" target="_blank">HBProduction</a> ~ Soon online<br>
-					Update of the website for HBProduction. <br>
-					[<a href="https://nbl7.net/" target="_blank">Nebula7</a>]
-				</div>
-				<br>
-				<div cursor class="work" data-cursor="/assets/image/fnd.svg">
-					Sep 2020 ~ <a href="https://www.fondoristorante.it/" target="_blank">Fondo Ristorante</a><br>
-					Webiste for Fondo Restaurant.<br>
-					[<a href="https://nbl7.net/" target="_blank">Nebula7</a>]
-				</div>
-				<br>
-				<div class="work">
-					Jul 2020 ~ <span class="primary">Management platform for tourist villages</span><br>
-					Digital platform for resorts that allows customers to order
-					meals online and allow staff to manage that orders, view statistics
-					and create food menus. <br>
-					[<a href="https://www.mywebstrategy.it/" target="_blank">My Web Strategy</a>]
-				</div>
-				<br>
-				<div cursor class="work" data-cursor="/assets/image/madame.svg">
-					Jun 2020 ~ <a href="https://madameloungebar.herokuapp.com/" target="_blank">Madamé Lounge Bar</a><br>
-					Website for online digital menu. <br>
-					[<a href="https://madameloungebar.herokuapp.com/" target="_blank">Madamé Lounge Bar</a>]
-				</div>
-				<br>
-				<div cursor class="work" data-cursor="/assets/image/cipa.svg">
-					May 2020 ~ <a href="https://centroippicopuntaala.it/it/" target="_blank">Centro Ippico Punta Ala</a><br>
-					Landing page for Centro Ippico Punta Ala. <br>
-					[<a href="https://nbl7.net/" target="_blank">Nebula7</a>]
-				</div>
-				<br>
-				<div cursor class="work" data-cursor="/assets/image/mila.png">
-					Feb 2020 ~ <a href="https://jillemanuelle.com/" target="_blank">Jill Emanuelle</a><br>
-					Photography portfolio for Jill Emanuelle. <br>
-					[<a href="https://nbl7.net/" target="_blank">Nebula7</a>]
-				</div>
-				<br>
-				<div cursor class="work" data-cursor="/assets/image/unisa.png">
-					May 2017 ~ <span class="primary">IT Technician</span><br>
-					Part-Time collaboration with my university college. <br>
-					[<a href="https://unisa.it/" target="_blank">University of Salerno</a>]
-				</div>
-			</div>
-		</section>
-		<br>
-
-	</div>
-
-	<script src="/node_modules/jquery/dist/jquery.js"></script>
-	<script src="/node_modules/gsap/dist/gsap.js"></script>
-	<script src="/script/utils.js"></script>
-	<script src="/script/index.js"></script>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/lazyload/lazyload.min.js"></script>
+  <script src="node_modules/gsap/dist/gsap.min.js"></script>
+  <script src="js/fakeDb.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>

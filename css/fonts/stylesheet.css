@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Bottega Veneta';
+    src: url('BottegaVenetaRegular.eot');
+    src: url('BottegaVenetaRegular.eot?#iefix') format('embedded-opentype'),
+        url('BottegaVenetaRegular.woff2') format('woff2'),
+        url('BottegaVenetaRegular.woff') format('woff'),
+        url('BottegaVenetaRegular.ttf') format('truetype'),
+        url('BottegaVenetaRegular.svg#BottegaVenetaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bottega Veneta';
+    src: url('BottegaVenetaBold.eot');
+    src: url('BottegaVenetaBold.eot?#iefix') format('embedded-opentype'),
+        url('BottegaVenetaBold.woff2') format('woff2'),
+        url('BottegaVenetaBold.woff') format('woff'),
+        url('BottegaVenetaBold.ttf') format('truetype'),
+        url('BottegaVenetaBold.svg#BottegaVenetaBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
