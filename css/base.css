@@ -238,15 +238,13 @@ main > section.open .content {
 }
 
 .job h4 {
-  border-bottom: 1px solid transparent;
-  border-top: 1px solid transparent;
-  padding: 17px 0px 16px;
-  line-height: 14px;
+  padding: 17px;
+  line-height: 17px;
   width: 100%;
   text-align: center;
   margin: auto 0px;
-	border-bottom: 1px solid var(--color-menuItem-hover);
-	border-top: 1px solid var(--color-menuItem-hover);
+  border-bottom: 1px solid var(--color-menuItem-hover);
+  border-top: 1px solid var(--color-menuItem-hover);
 }
 
 .job:first-child h4 {
