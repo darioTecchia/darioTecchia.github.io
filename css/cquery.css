@@ -17,17 +17,25 @@
   
 }
 @media all and (max-width: 736px){
+  /* utils */
+  .maxw {
+    max-width: unset;
+    border-left: 0px solid var(--color-menuItem-hover);
+    border-right: 0px solid var(--color-menuItem-hover);
+  }
+  /* utils end */
+
   /* cursor */
   #cursor {
     display: none;
   }
   /* cursor end */
-  
+
   /* jobs */
-.job img {
-	width: 50%;
-}
-/* jobs end */
+  .job img {
+    width: 50%;
+  }
+  /* jobs end */
 }
 @media all and (max-width: 540px){
   

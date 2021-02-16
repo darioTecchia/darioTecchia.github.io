@@ -79,6 +79,7 @@ body {
 
 	-webkit-font-smoothing: antialiased;
 	text-transform: uppercase !important;
+	text-align: justify;
 }
 
 /* utils */
