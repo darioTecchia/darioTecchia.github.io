@@ -309,36 +309,8 @@ main > section.open .content {
 /* works end */
 
 /* skills */
-.skills-section .content {
-	padding: 0px;
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-
-	margin-left: -1px;
-
-	padding-bottom: var(--pad);
-}
-
-.skills .skill {
-	padding: 17px;
-  text-align: center;
-  flex: 33.33333%;
-
-	border-left: 1px solid var(--color-menuItem-hover);
-	border-bottom: 1px solid var(--color-menuItem-hover);
-}
-
-.skills .empty.skill {
-  flex: 33.33333%;
-	border-bottom: 0px;
-}
-
-.skills .skill:last-child {
-	border-left: 0px solid var(--color-menuItem-hover);
-	border-bottom: 0px solid var(--color-menuItem-hover);
+.skill {
+	
 }
 /* skills end */
 
