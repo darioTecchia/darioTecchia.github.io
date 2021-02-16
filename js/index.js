@@ -23,7 +23,7 @@ const init = () => {
 const app = Vue.createApp({
   data() {
     return {
-      jobs: fakedb.jobs,
+      works: fakedb.works,
       about: fakedb.about,
       skills: fakedb.skills,
       subject: "",

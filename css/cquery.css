@@ -31,11 +31,11 @@
   }
   /* cursor end */
 
-  /* jobs */
-  .job img {
+  /* works */
+  .work img {
     width: 50%;
   }
-  /* jobs end */
+  /* works end */
 }
 @media all and (max-width: 540px){
   

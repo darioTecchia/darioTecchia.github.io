@@ -44,13 +44,13 @@
         </div>
       </div>
     </section>
-    <section class="jobs-section">
-      <h4 class="title"><span class="glitch">Jobs</span> [<span>+</span><span>-</span>]</h4>
+    <section class="works-section">
+      <h4 class="title"><span class="glitch">works</span> [<span>+</span><span>-</span>]</h4>
       <div class="content">
-        <div class="job" v-for="job in jobs">
-          <h4 class="info"> <a :href="job.url" target="_blank" rel="noopener noreferrer">{{job.name}}</a> • {{job.description}} • {{job.committee}}</h4>
+        <div class="work" v-for="work in works">
+          <h4 class="info"> <a :href="work.url" target="_blank" rel="noopener noreferrer">{{work.name}}</a> • {{work.description}} • {{work.committee}}</h4>
           <div class="media-wrapper">
-            <img lazy-load :data-src="media" v-for="media in job.medias" alt="" srcset="">
+            <img lazy-load :data-src="media" v-for="media in work.medias" alt="" srcset="">
           </div>
         </div>
       </div>

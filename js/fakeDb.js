@@ -1,5 +1,5 @@
 const fakedb = {
-  jobs: [
+  works: [
     {
       name: "Hotel Marina",
       committee: "Nebula 7",
