@@ -17,6 +17,12 @@
   
 }
 @media all and (max-width: 736px){
+  /* cursor */
+  #cursor {
+    display: none;
+  }
+  /* cursor end */
+  
   /* jobs */
 .job img {
 	width: 50%;

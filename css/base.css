@@ -13,12 +13,16 @@
 	color: var(--black);
 }
 ::-webkit-input-placeholder {
+	font: var(--normalfont);
 }
 :-moz-placeholder {
+	font: var(--normalfont);
 }
 ::-moz-placeholder {
+	font: var(--normalfont);
 }
 :-ms-input-placeholder {
+	font: var(--normalfont);
 }
 :placeholder-shown {
 }
@@ -77,6 +81,14 @@ body {
 	text-transform: uppercase !important;
 }
 
+/* utils */
+.maxw {
+	max-width: 50%;
+	border-left: 1px solid var(--color-menuItem-hover);
+	border-right: 1px solid var(--color-menuItem-hover);
+}
+/* utils end */
+
 /* Page Loader */
 #preload {
 	position: fixed;
@@ -116,12 +128,18 @@ a {
 	text-decoration: none;
 	color: var(--color-link);
 	outline: none;
+	transition: all .3s ease;
 }
 
 a:hover,
 a:focus {
 	color: var(--color-link-hover) !important;
 	outline: none;
+}
+
+a.disabled {
+	pointer-events: none;
+	opacity: .5;
 }
 
 /* main */
@@ -271,11 +289,29 @@ main > section.open .content {
 }
 /* skills end */
 
-/* about */
-.about-section .content {
-	padding: 0px var(--pad);
-	max-width: 50%;
-	border-left: 1px solid var(--color-menuItem-hover);
-	border-right: 1px solid var(--color-menuItem-hover);
+/* form */
+.input-g {
+	margin-bottom: var(--pad);
 }
-/* about end */
+
+.input-g.submit {
+	text-align: right;
+}
+
+.input-g.submit a:not(.disabled) {
+	text-align: right;
+	-webkit-animation: glitch 6s infinite steps(50);
+          animation: glitch 6s infinite steps(50);
+}
+
+.input-g input,
+.input-g textarea {
+	font: var(--normalfont);
+	display: block;
+  width: 100%;
+  outline: none;
+  border: 0px;
+	padding: var(--hpad) 0px;
+  border-bottom: 1px solid var(--color-menuItem-hover);
+}
+/* form end */

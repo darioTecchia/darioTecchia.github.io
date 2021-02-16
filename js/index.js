@@ -23,7 +23,16 @@ const app = Vue.createApp({
     return {
       jobs: fakedb.jobs,
       about: fakedb.about,
-      skills: fakedb.skills
+      skills: fakedb.skills,
+      subject: "",
+      request: ""
+    }
+  },
+  computed: {
+    maillink() {
+      return "mailto: dariotecchia@gmail.com?" + 
+      `subject=${this.subject}` + 
+      `&body=${this.request}`;
     }
   },
   mounted: () => {
