@@ -266,6 +266,8 @@ main > section.open .content {
   flex-wrap: wrap;
 
 	margin-left: -1px;
+
+	padding-bottom: var(--pad);
 }
 
 .skills .skill {

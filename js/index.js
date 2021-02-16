@@ -12,7 +12,9 @@ const init = () => {
   }, 1000);
 
   $('body').on('click', 'section > .title', function() {
-    // $('section').removeClass('open');
+    if(!$(this).closest('section').hasClass('open')) {
+      $('section').removeClass('open');
+    }
     $(this).closest('section').toggleClass('open');
   })
 
