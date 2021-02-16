@@ -220,6 +220,16 @@ main > section.open .content {
 }
 /* main end */
 
+/* about */
+.about-pic-wrapper {
+	text-align: center;
+}
+
+.about-pic-wrapper img {
+	width: 20%;
+}
+/* about end */
+
 /* works */
 .works-section .content {
 	padding: 0px;
@@ -297,12 +307,6 @@ main > section.open .content {
 
 .input-g.submit {
 	text-align: right;
-}
-
-.input-g.submit a:not(.disabled) {
-	text-align: right;
-	-webkit-animation: glitch 6s infinite steps(50);
-          animation: glitch 6s infinite steps(50);
 }
 
 .input-g input,
