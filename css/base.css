@@ -5,335 +5,150 @@
 }
 
 ::-moz-selection {
-	background-color: var(--primary);
-	color: var(--black);
+	background-color: white;
+	color: black;
 }
 ::selection{
-	background-color: var(--primary);
-	color: var(--black);
-}
-::-webkit-input-placeholder {
-	font: var(--normalfont);
-}
-:-moz-placeholder {
-	font: var(--normalfont);
-}
-::-moz-placeholder {
-	font: var(--normalfont);
-}
-:-ms-input-placeholder {
-	font: var(--normalfont);
-}
-:placeholder-shown {
-}
-
-::-webkit-scrollbar {
-	width: 11px;
-}
-::-webkit-scrollbar-thumb {
-	background-color: var(--primary);
-	border: 3px solid var(--primary);
-}
-::-webkit-scrollbar-track {
-	background: var(--color-bg);
+	background-color: white;
+	color: black;
 }
 
 @font-face {
-	font-family: 'Bottega Veneta';
-	src: url('/css/fonts/BottegaVenetaRegular.eot');
-	src: url('/css/fonts/BottegaVenetaRegular.eot?#iefix') format('embedded-opentype'),
-			 url('/css/fonts/BottegaVenetaRegular.woff2') format('woff2'),
-			 url('/css/fonts/BottegaVenetaRegular.woff') format('woff'),
-			 url('/css/fonts/BottegaVenetaRegular.ttf') format('truetype'),
-			 url('/css/fonts/BottegaVenetaRegular.svg#BottegaVenetaRegular') format('svg');
+	font-family: 'Staatliches';
+	src: url('/css/fonts/Staatliches-Regular.eot');
+	src: url('/css/fonts/Staatliches-Regular.eot?#iefix') format('embedded-opentype'),
+			url('/css/fonts/Staatliches-Regular.woff2') format('woff2'),
+			url('/css/fonts/Staatliches-Regular.woff') format('woff'),
+			url('/css/fonts/Staatliches-Regular.ttf') format('truetype'),
+			url('/css/fonts/Staatliches-Regular.svg#Staatliches-Regular') format('svg');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
-@font-face {
-	font-family: 'Bottega Veneta';
-	src: url('/css/fonts/BottegaVenetaBold.eot');
-	src: url('/css/fonts/BottegaVenetaBold.eot?#iefix') format('embedded-opentype'),
-			 url('/css/fonts/BottegaVenetaBold.woff2') format('woff2'),
-			 url('/css/fonts/BottegaVenetaBold.woff') format('woff'),
-			 url('/css/fonts/BottegaVenetaBold.ttf') format('truetype'),
-			 url('/css/fonts/BottegaVenetaBold.svg#BottegaVenetaBold') format('svg');
-	font-weight: bold;
-	font-style: normal;
-	font-display: swap;
-}
+
 
 :root {
-	--normalfont: 12px/20px 'Bottega Veneta',Arial,Helvetica,sans-serif;
+	--normalfont: 20px/26px 'Staatliches',Arial,Helvetica,sans-serif;
+	--mediumfont: 32px/40px 'Staatliches',Arial,Helvetica,sans-serif;
+	--bigfont: 40px/46px 'Staatliches',Arial,Helvetica,sans-serif;
+	--hugefont: 60px/66px 'Staatliches',Arial,Helvetica,sans-serif;
 
 	--hpad: calc(var(--pad) * .5);
 	--pad: 20px;
+	--dpad: calc(var(--pad) * 2);
 }
 
-h1, h2, h3, h4, h5, h6 { margin: 0px; padding: 0px; }
+.normalfont {
+	font: var(--normalfont);
+}
+
+.mediumfont {
+	font: var(--mediumfont);
+	letter-spacing: 3px;
+}
+
+.bigfont {
+	font: var(--bigfont);
+	letter-spacing: 3px;
+}
+
+.hugefont {
+	font: var(--hugefont);
+	letter-spacing: 3px;
+}
+
+.outline {
+	color: black;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a, a:visited {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
 
 body {
-	margin: 0;
+	color: white;
+	background-color: black;
 
-
-	--color-bg: #000;
-	--color-text: #fff;
-	--primary: #c0392b;
-	
-	color: var(--color-text);
-	background-color: var(--color-bg);
 	font: var(--normalfont);
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	--cursor-stroke: #000;
-	--cursor-fill: none;
-	--cursor-stroke-width: 1px;
+}
 
-	-webkit-font-smoothing: antialiased;
-	text-transform: uppercase !important;
+main {
+	position: absolute;
+	top: var(--pad);
+	left: var(--pad);
+	right: var(--pad);
+	bottom: var(--pad);
+	
+	border: 1px solid white;
+
+	overflow: scroll;
+}
+
+header {
+	display: flex;
+
+	border-bottom: 1px solid white;
+}
+
+header .left-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+	border-right: 1px solid white;
+
+  width: 170px;
+  height: 170px;
+}
+
+header .left-nav a {
+	text-align: center;
+  display: inline-block;
+}
+
+header .right-nav {
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  padding: var(--pad) 0px;
+}
+
+section {
+	position: relative;
+	border-bottom: 1px solid white;
+}
+
+section:last-child {
+	border-bottom: none;
+}
+
+section .section-head {
+	position: absolute;
+  transform: translate(var(--pad),-50%);
+  background-color: black;
+  font-style: italic;
+  border: 1px solid;
+  padding: 5px 27px;
+}
+
+section .section-body {
+	padding: 40px 20px;
 	text-align: justify;
 }
-
-[fullable] {
-	cursor: pointer;
-}
-
-#full-image {
-	top: 0px;
-	position: fixed;
-	background: var(--color-bg);
-	left: 0px;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	pointer-events: none;
-	transition: all .3s ease;
-	cursor: pointer;
-	opacity: 0;
-	/* transform: translateX(-100%); */
-}
-
-.full-image #full-image {
-	/* transform: translateX(0%); */
-	opacity: 1;
-	pointer-events: all;
-}
-
-#full-image img {
-	width: 50%;
-}
-
-/* utils */
-.maxw {
-	max-width: 700px;
-	border-left: 1px solid var(--primary);
-	border-right: 1px solid var(--primary);
-}
-/* utils end */
-
-/* Page Loader */
-#preload {
-	position: fixed;
-	z-index: 1000;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: var(--primary);
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-/* page loader end */
-
-/* cursor */
-#cursor {
-  --size: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: var(--size);
-  width: var(--size);
-  /* background-color: #000; */
-	border: 1px solid var(--primary);
-  border-radius: 50%;
-  transform: translate3d(
-    calc(100vw * var(--cursor-x) - var(--size) / 2), 
-    calc(100vh * var(--cursor-y) - var(--size) / 2), 
-    0);
-  pointer-events: none;
-	z-index: 9999;
-}
-/* cursor end */
-
-a {
-	text-decoration: none;
-	color: var(--primary);
-	outline: none;
-	transition: all .3s ease;
-}
-
-a:hover,
-a:focus {
-	color: var(--color-text) !important;
-	outline: none;
-}
-
-a.disabled {
-	pointer-events: none;
-	opacity: .5;
-}
-
-/* main */
-main {
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-}
-
-main > section {
-	height: 100%;
-	transition: all .3s ease;
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	/* justify-content: center; */
-	overflow: hidden;
-
-	flex: 1;
-	min-height: 47px;
-
-	border-bottom: 1px solid var(--primary);
-}
-
-main > section:last-child {
-	border-bottom: 0px solid var(--primary);
-}
-
-main > section.open {
-	flex: 30;
-}
-
-main > section .title {
-	transition: all .3s ease;
-	
-	border-bottom: 1px solid transparent;
-	padding: 17px 0px 16px;
-	line-height: 14px;
-	/* width: 100%; */
-	text-align: center;
-	margin: auto;
-
-	cursor: pointer;
-}
-
-main > section .title span:nth-child(2),
-main > section.open .title span:nth-child(3) {
-	display: inline;
-}
-
-main > section.open .title span:nth-child(2),
-main > section .title span:nth-child(3) {
-	display: none;
-}
-
-main > section.open .title {
-	border-color: var(--primary);
-	width: 100%;
-}
-
-main > section .content {
-	opacity: 0;
-	height: 0%;
-	transition: all .3s ease;
-	padding: var(--pad);
-	display: none;
-	overflow: auto;
-	width: 100%;
-}
-
-main > section.open .content {
-	display: block;
-	height: 100%;
-	opacity: 1;
-}
-/* main end */
-
-/* about */
-.about-pic-wrapper {
-	text-align: center;
-}
-
-.about-pic-wrapper img {
-	width: 20%;
-}
-/* about end */
-
-/* works */
-.works-section .content {
-	padding: 0px;
-}
-
-.work .media-wrapper {
-	padding: var(--pad);
-}
-
-.work img {
-	width: 33%;
-	opacity: 0;
-	transition: opacity .3s ease;
-	transition-delay: .5s;
-}
-
-.work h4 {
-  padding: 17px;
-  line-height: 17px;
-  width: 100%;
-  text-align: center;
-  margin: auto 0px;
-  border-bottom: 1px solid var(--primary);
-  border-top: 1px solid var(--primary);
-}
-
-.work:first-child h4 {
-  border-top: 0px solid transparent;
-}
-
-.work img[src] {
-	opacity: 1;
-}
-/* works end */
-
-/* skills */
-.skill {
-	
-}
-/* skills end */
-
-/* form */
-.input-g {
-	margin-bottom: var(--pad);
-}
-
-.input-g.submit {
-	text-align: right;
-}
-
-.input-g input,
-.input-g textarea {
-	font: var(--normalfont);
-	display: block;
-  width: 100%;
-  outline: none;
-  border: 0px;
-	padding: var(--hpad) 0px;
-  border-bottom: 1px solid var(--primary);
-	background-color: var(--color-bg);
-	color: var(--color-text);
-}
-/* form end */

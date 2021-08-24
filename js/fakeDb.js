@@ -86,7 +86,7 @@ const fakedb = {
     "Express", "Git", "GitHub", "Bitbucket", "GitLab", "Java"],
   about: {
     body: "My name is Dario Tecchia, I was born on September 16, 1994 and currently live in Sorrento, Italy. Since childhood I have developed a great passion for the computer world. I am particularly attracted by web technologies and frontend development. I currently work occasionally with [Nebula7] with whom I have developed some websites.",
-    educations: "I enrolled myself at Computer Science course at University of Salerno in 2013. During these years, I improved skills in Programming and Problem Solving. I obtained the Bachelor's Degree defending a thesis on TiVeJS: A Javascript application for the recognition of diagrammatic languages proposed by Prof. Gennaro Costagliola and PhD M. De Rosa. After, I chosed to begin a master degree in Computer Science, with address Software Engineering and IT Management. Currently, I study to obtain the Master's Degree.",
+    education: "I enrolled myself at Computer Science course at University of Salerno in 2013. During these years, I improved skills in Programming and Problem Solving. I obtained the Bachelor's Degree defending a thesis on TiVeJS: A Javascript application for the recognition of diagrammatic languages proposed by Prof. Gennaro Costagliola and PhD M. De Rosa. After, I chosed to begin a master degree in Computer Science, with address Software Engineering and IT Management. Currently, I study to obtain the Master's Degree.",
     name: "Dario Tecchia",
   }
 }
