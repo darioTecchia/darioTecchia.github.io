@@ -6,114 +6,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dario Tecchia</title>
   <meta name="author" content="Dario Tecchia" />
-  <meta name="description" content="My name is Dario Tecchia, I was born on September 16, 1994 and currently live in Sorrento, Italy. Since childhood I have developed a great passion for the computer world. I am particularly attracted by web technologies and frontend development. I currently work occasionally with [Nebula7] with whom I have developed some websites." />
+  <meta name="description"
+    content="My name is Dario Tecchia, I was born on September 16, 1994 and currently live in Sorrento, Italy. Since childhood I have developed a great passion for the computer world. I am particularly attracted by web technologies and frontend development. I currently work occasionally with [Nebula7] with whom I have developed some websites." />
   <meta name="keywords" content="layout, web design, html, animation, hover effect, menu, gallery layout, css" />
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" type="text/css" href="css/keyframes.css" />
   <link rel="stylesheet" type="text/css" href="css/base.css" />
   <link rel="stylesheet" type="text/css" href="css/cquery.css" />
-  <script>
-    document.documentElement.className = "js";
-    var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
-    supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
-  </script>
 </head>
 
-<body id="appa" class="loading">
-  <div id="preload">
-    <span>Loading</span>
+<body id="app">
+
+  <div class="winbox">
+    <img src="/img/me-toon.svg" v-if="win" alt="Dario Tecchia">
   </div>
 
-  <div id="cursor"></div>
+  <div class="intro content">
+    <div>&nbsp;</div>
+    <div>
+      <h1>hi, i'm dario _______</h1>
+      <h2>front-end developer actually acting as a freelance developer</h2>
+    </div>
+    <div>
+      <a href="#body">
+        scroll down
+      </a>
+    </div>
+  </div>
 
-	<div id="full-image">
-		<img src="" alt="">
-	</div>
+  <div id="body" class="body content">
+    <section class="skills">
+      <h2>things i think i know</h2>
+      <span v-for="skill in skills" class="skill">{{skill}}<span class="dot"> • </span> </span>
+    </section>
 
-  <main id="app">
-    <section class="about-section open">
-      <h4 class="title"><span>About</span> [<span>+</span><span>-</span>]</h4>
-      <div class="content maxw">
-        <div class="about-body">
-          <h4 class="about-title">bio</h4>
-          <div class="about-pic-wrapper">
-            <img src="img/me-toon.png" alt="" lazy-load>
-          </div>
-          <div>
-            {{about.body}}
-          </div>
-          <br>
-          <h4 class="about-title">educations</h4>
-          <div class="about-pic-wrapper">
-            <img src="img/unisa.png" alt="" lazy-load>
-          </div>
-					<br>
-          <div>
-            {{about.educations}}
-          </div>
-					<div>
-						<b><a href="https://github.com/darioTecchia/Degree-Thesis/raw/master/thesis.pdf" target="_blank" rel="noopener noreferrer">Link to the thesis</a>.</b>
-					</div>
-        </div>
-      </div>
+    <section class="portfolio">
+      <h2>things that i've worked on</h2>
+      <ul v-for="work in works" class="work">
+        <li>
+          <a target="_blank" :href="'//' + work.url">
+            <div class="work-title">{{work.date}} • <b>{{work.name}}</b></div>
+            <div class="work-description">{{work.description}}</div>
+          </a>
+        </li>
+      </ul>
     </section>
-    <section v-if="false" class="skills-section">
-      <h4 class="title"><span>Skills</span> [<span>+</span><span>-</span>]</h4>
-      <div class="content maxw">
-        <span class="skill" v-for="skill in skills">
-          <b>{{skill}}</b>
-          • 
-        </span>
-      </div>
-    </section>
-    <section class="works-section">
-      <h4 class="title"><span>works</span> [<span>+</span><span>-</span>]</h4>
-      <div class="content">
-        <div class="work" v-for="work in works">
-          <h4 class="info"> <a :href="work.url" target="_blank" rel="noopener noreferrer">{{work.name}}</a> • {{work.description}} • {{work.committee}}</h4>
-          <div class="media-wrapper">
-            <img fullable lazy-load :data-src="media" v-for="media in work.medias" alt="" srcset="">
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="contact-section">
-      <h4 class="title"><span>Contact</span> [<span>+</span><span>-</span>]</h4>
-      <div class="content maxw">
-        <b>Keep in touch: </b>
-        <a href="https://github.com/darioTecchia" target="_blank" rel="noopener noreferrer">GitHub</a>
-        •
-        <a href="https://www.linkedin.com/in/dario-tecchia-3b8934120/" target="_blank" rel="noopener noreferrer">Linkedin</a>
-        <br>
-        <b>Social: </b>
-        <a href="https://www.facebook.com/dario.tecchia" target="_blank" rel="noopener noreferrer">Facebook</a>
-        •
-        <a href="https://www.instagram.com/dariotecchia/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <br>
-        <br>
-        <b>or send me ad email</b>
-        <br>
-        <div class="input-g">
-          <label for="subject"> <b>subject</b> </label>
-          <input v-model="subject" placeholder="SUBJECT" type="text" name="subject" id="subject">
-        </div>
-        <div class="input-g">
-          <label for="request"> <b>request</b> </label>
-          <textarea v-model="request" name="request" id="request" cols="30" rows="5">Hi Dario! </textarea>
-        </div>
-        <div class="input-g submit">
-          <a :class="{ disabled: !(request.length && subject.length) }" :href="maillink">[send]</a>
-        </div>
-      </div>
-    </section>
-  </main>
+  </div>
 
-  <script src="https://unpkg.com/vue@next"></script>
+  <div class="outro content">
+    type in the missing parts and you will unlock the easter egg
+  </div>
+
+  <script src="node_modules/vue/dist/vue.global.prod.js"></script>
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/lazyload/lazyload.min.js"></script>
   <script src="node_modules/gsap/dist/gsap.min.js"></script>
   <script src="js/fakeDb.js"></script>
-  <script src="js/cursor.js"></script>
+  <!-- <script src="js/cursor.js"></script> -->
   <script src="js/index.js"></script>
 </body>
 

@@ -17,29 +17,7 @@
   
 }
 @media all and (max-width: 736px){
-  #full-image img {
-    width: 100%;
-  }
-
-  /* utils */
-  .maxw {
-    max-width: unset;
-    border-left: 0px solid var(--color-menuItem-hover);
-    border-right: 0px solid var(--color-menuItem-hover);
-  }
-  /* utils end */
-
-  /* cursor */
-  #cursor {
-    display: none;
-  }
-  /* cursor end */
-
-  /* works */
-  .work img {
-    width: 50%;
-  }
-  /* works end */
+  
 }
 @media all and (max-width: 540px){
   
@@ -48,5 +26,8 @@
   
 }
 @media all and (max-width: 340px){
+  
+}
+@media (orientation: portrait){
   
 }
