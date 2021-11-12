@@ -15,55 +15,54 @@
   <link rel="stylesheet" type="text/css" href="css/cquery.css" />
 </head>
 
-<body>
+<body id="app">
 
-  <main id="app">
-    <header>
-      <!-- <nav class="left-nav">
-        <a class="hugefont" href="/">DT</a>
-      </nav> -->
-      <nav class="right-nav">
-        <h1 class="hugefont">DARIO TECCHIA</h1>
-        <h2 class="bigfont outline">PASSIONATE DEVELOPER</h2>
-      </nav>
-    </header>
-    <div class="body">
-      <section class="bio">
-        <h3 class="section-head mediumfont">ABOUT ME</h3>
-        <div class="section-body">
-          {{about.body}}
-        </div>
-      </section>
+  <div class="winbox">
+    <img src="/img/me-toon.svg" v-if="win" alt="Dario Tecchia">
+  </div>
 
-      <section class="education">
-        <h3 class="section-head mediumfont">Education</h3>
-        <div class="section-body">
-          {{about.education}}
-        </div>
-      </section>
-
-      <section class="skills">
-        <h3 class="section-head mediumfont">skills</h3>
-        <div class="section-body">
-          {{skills}}
-        </div>
-      </section>
-
-      <section class="some-works">
-        <h3 class="section-head mediumfont">some works</h3>
-        <div class="section-body">
-          <div v-for="work in works">{{work}} <br><br> </div>
-        </div>
-      </section>
+  <div class="intro content">
+    <div>&nbsp;</div>
+    <div>
+      <h1>hi, i'm dario _______</h1>
+      <h2>front-end developer actually acting as a freelance developer</h2>
     </div>
-  </main>
+    <div>
+      <a href="#body">
+        scroll down
+      </a>
+    </div>
+  </div>
 
-  <script src="https://unpkg.com/vue@next"></script>
+  <div id="body" class="body content">
+    <section class="skills">
+      <h2>things i think i know</h2>
+      <span v-for="skill in skills" class="skill">{{skill}}<span class="dot"> • </span> </span>
+    </section>
+
+    <section class="portfolio">
+      <h2>things that i've worked on</h2>
+      <ul v-for="work in works" class="work">
+        <li>
+          <a target="_blank" :href="'//' + work.url">
+            <div class="work-title">{{work.date}} • <b>{{work.name}}</b></div>
+            <div class="work-description">{{work.description}}</div>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="outro content">
+    type in the missing parts and you will unlock the easter egg
+  </div>
+
+  <script src="node_modules/vue/dist/vue.global.prod.js"></script>
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/lazyload/lazyload.min.js"></script>
   <script src="node_modules/gsap/dist/gsap.min.js"></script>
   <script src="js/fakeDb.js"></script>
-  <script src="js/cursor.js"></script>
+  <!-- <script src="js/cursor.js"></script> -->
   <script src="js/index.js"></script>
 </body>
 
