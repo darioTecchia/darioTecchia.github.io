@@ -23,7 +23,7 @@
   <div class="winbutton" v-if="win" @click="win = false"></div>
 
   <div class="intro content">
-    <div>&nbsp;</div>
+    <div style="visibility: hidden;">&nbsp;</div>
     <div>
       <h1>hi, i'm dario _______</h1>
       <h2>front-end developer actually acting as a freelance developer</h2>
@@ -43,10 +43,10 @@
 
     <section class="portfolio">
       <h2>things that i've worked on</h2>
-      <ul v-for="work in works" class="work">
-        <li>
+      <ul>
+        <li v-for="work in works" class="work">
           <a target="_blank" :href="'//' + work.url">
-            <div class="work-title">{{work.committee}} • <b>{{work.name}}</b></div>
+            <div class="work-title">{{work.committee}} • <b class="work-name">{{work.name}}</b></div>
             <div class="work-description">{{work.description}}</div>
           </a>
         </li>
@@ -56,11 +56,7 @@
 
   <div class="outro content">
     type in the missing parts and you will unlock the easter egg.
-    <br>
-    <b class="hint-button" @click="hint">hint</b>.
   </div>
-
-  <input ref="hint" type="text" name="hint" id="hint">
 
   <script src="node_modules/vue/dist/vue.global.prod.js"></script>
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
