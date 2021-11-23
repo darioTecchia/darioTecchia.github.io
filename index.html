@@ -10,7 +10,6 @@
     content="My name is Dario Tecchia, I was born on September 16, 1994 and currently live in Sorrento, Italy. Since childhood I have developed a great passion for the computer world. I am particularly attracted by web technologies and frontend development. I currently work occasionally with [Nebula7] with whom I have developed some websites." />
   <meta name="keywords" content="layout, web design, html, animation, hover effect, menu, gallery layout, css" />
   <link rel="shortcut icon" href="favicon.ico">
-  <link rel="stylesheet" type="text/css" href="css/keyframes.css" />
   <link rel="stylesheet" type="text/css" href="css/base.css" />
   <link rel="stylesheet" type="text/css" href="css/cquery.css" />
 </head>
@@ -20,6 +19,8 @@
   <div class="winbox">
     <img src="/img/me-toon.svg" v-if="win" alt="Dario Tecchia">
   </div>
+
+  <div class="winbutton" v-if="win" @click="win = false"></div>
 
   <div class="intro content">
     <div>&nbsp;</div>
@@ -45,7 +46,7 @@
       <ul v-for="work in works" class="work">
         <li>
           <a target="_blank" :href="'//' + work.url">
-            <div class="work-title">{{work.date}} • <b>{{work.name}}</b></div>
+            <div class="work-title">{{work.committee}} • <b>{{work.name}}</b></div>
             <div class="work-description">{{work.description}}</div>
           </a>
         </li>
@@ -54,8 +55,12 @@
   </div>
 
   <div class="outro content">
-    type in the missing parts and you will unlock the easter egg
+    type in the missing parts and you will unlock the easter egg.
+    <br>
+    <b class="hint-button" @click="hint">hint</b>.
   </div>
+
+  <input ref="hint" type="text" name="hint" id="hint">
 
   <script src="node_modules/vue/dist/vue.global.prod.js"></script>
   <script src="node_modules/jquery/dist/jquery.min.js"></script>

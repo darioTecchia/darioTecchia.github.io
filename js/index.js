@@ -28,6 +28,9 @@ const app = Vue.createApp({
         this.typing = '';
         this.win = true;
       }
+    },
+    hint(event) {
+      this._.refs.hint.focus();
     }
   }
 });
