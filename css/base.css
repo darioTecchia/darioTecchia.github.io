@@ -128,10 +128,16 @@ body {
 
 .work {
 	width: fit-content;
+	margin-bottom: var(--pad);
 }
 
 .work:hover {
 	text-decoration: underline;
+	text-decoration-color: red;
+}
+
+.work a {
+	display: block;
 }
 
 #hint {
