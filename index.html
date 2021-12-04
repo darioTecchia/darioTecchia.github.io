@@ -22,10 +22,10 @@
 
   <div class="winbutton" v-if="win" @click="win = false"></div>
 
-  <div class="intro content">
+  <div class="intro content" v-bind:class="{ win: win }">
     <div style="visibility: hidden;">&nbsp;</div>
     <div>
-      <h1>hi, i'm dario _______</h1>
+      <h1>hi, i'm dario <span class="lastname">tecchia</span></h1>
       <h2>front-end developer actually acting as a freelance developer</h2>
     </div>
     <div>

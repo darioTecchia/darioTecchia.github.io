@@ -177,3 +177,13 @@ a[href="//"] {
 .winbox img {
 	height: 40%;
 }
+
+.lastname {
+	color: var(--secondary-color);
+	text-decoration: underline;
+	text-decoration-color: black;
+}
+
+.win .lastname {
+	color: var(--primary-color);
+}
