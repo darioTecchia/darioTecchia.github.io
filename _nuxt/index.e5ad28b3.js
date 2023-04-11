@@ -1,0 +1,1 @@
+import{a as e,o,b as t,e as s}from"./entry.d3c7897b.js";const n={data(){return{}},mounted(){},methods:{}},a={id:"home"},c=s("h1",null,"home",-1),r=[c];function d(_,i,h,m,p,u){return o(),t("div",a,r)}const l=e(n,[["render",d]]);export{l as default};
