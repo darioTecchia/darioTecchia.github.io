@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+}
+
+*,
+*:focus {
+  outline: none !important;
+}
+
+.geocoder {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapboxgl-ctrl-bottom-left,
+.mapboxgl-ctrl-bottom-right {
+  display: none;
+}
+
+.mapboxgl-ctrl-geocoder .suggestions {
+  border: 1px solid !important;
+}
+
+.mapbox-gl-geocoder--error, 
+.mapbox-gl-geocoder--no-results {
+  color: black !important;
+  text-align: left !important;
+  padding: 6px 12px !important;
+}
+
+#info h3 {
+  position: sticky;
+  top: 0px;
+  backdrop-filter: blur(1px);
+}
+
+.c-btn {
+
+}
