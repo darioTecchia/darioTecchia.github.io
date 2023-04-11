@@ -1,6 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: false,
   app: {
+    baseURL: '/darioTecchia.github.io/',
     head: {
       title: 'Dario Tecchia',
       meta: [
@@ -18,8 +20,6 @@ export default defineNuxtConfig({
   ],
   css: [
     '@/assets/css/main.css',
-    'mapbox-gl/dist/mapbox-gl.css',
-    '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css',
     "bootstrap/dist/css/bootstrap.min.css",
     "bootstrap-vue-3/dist/bootstrap-vue-3.css",
   ]
