@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    HOME
+    <h1>home</h1>
   </div>
 </template>
 
@@ -8,16 +8,13 @@
 
 export default ({
   data() {
-   
+    return {}
   },
   mounted() {
   },
   methods: {
-    
   }
 })
 </script>
 
-<style lang="css" scoped>
-
-</style>
+<style lang="css" scoped></style>
