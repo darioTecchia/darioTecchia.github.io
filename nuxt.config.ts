@@ -1,8 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   app: {
-    baseURL: '/darioTecchia.github.io/',
     head: {
       title: 'Dario Tecchia',
       meta: [
@@ -19,8 +18,8 @@ export default defineNuxtConfig({
   modules: [
   ],
   css: [
-    '@/assets/css/main.css',
     "bootstrap/dist/css/bootstrap.min.css",
     "bootstrap-vue-3/dist/bootstrap-vue-3.css",
+    '@/assets/style/main.scss',
   ]
 })
