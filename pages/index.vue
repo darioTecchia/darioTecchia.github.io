@@ -27,6 +27,8 @@
 <script lang="ts">
 import Help from '~/components/Help.vue'
 import Welcome from '~/components/Welcome.vue'
+import Projects from '~/components/Projects.vue'
+import Marika from '~/components/Marika.vue'
 
 export default ({
   data() {
@@ -36,6 +38,8 @@ export default ({
 
       help: Help,
       welcome: Welcome,
+      projects: Projects,
+      marika: Marika,
 
       historyIndex: 0,
       history: [] as string[],
@@ -75,6 +79,14 @@ export default ({
         case 'h':
         case 'help':
           this.commands.push(this.help);
+          break;
+
+        case 'list':
+          this.commands.push(this.projects);
+          break;
+
+        case 'marika':
+          this.commands.push(this.marika);
           break;
 
         default:
@@ -145,7 +157,7 @@ export default ({
     flex-wrap: wrap;
 
     .active-folder {
-      color: #E94B35;
+      color: #1AAF5C;
     }
 
     input {
