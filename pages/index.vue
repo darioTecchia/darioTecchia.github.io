@@ -9,7 +9,7 @@
       <div class="content">
         <template v-for="command in commands">
           <template v-if="typeof command == 'object'">
-            <component :is="command"></component>
+            <component :executeCommand="executeCommand" :is="command"></component>
           </template>
           <template v-else>
             <div>{{ command }}</div>
@@ -26,6 +26,7 @@
 
 <script lang="ts">
 import Help from '~/components/Help.vue'
+import Welcome from '~/components/Welcome.vue'
 
 export default ({
   data() {
@@ -34,6 +35,7 @@ export default ({
       command: '' as string,
 
       help: Help,
+      welcome: Welcome,
 
       historyIndex: 0,
       history: [] as string[],
@@ -54,17 +56,16 @@ export default ({
       }
 
       if (e.code == "Enter" && this.command !== '') {
-        this.historyIndex++;
-        this.history.push(this.command);
-        this.commands.push('➜ ' + this.command);
         this.executeCommand(this.command);
-        this.command = '';
       }
     },
     focus() {
       (this.$refs.input as HTMLElement)?.focus();
     },
     executeCommand(command: string) {
+      this.historyIndex++;
+      this.history.push(command);
+      this.commands.push('➜ ' + command);
       switch (command) {
         case 'c':
         case 'clear':
@@ -80,6 +81,7 @@ export default ({
           this.commands.push('command not found: ' + command);
           break;
       }
+      this.command = '';
     },
     clamp: (num: number, min: number, max: number): number => Math.min(Math.max(num, min), max),
     historyUp() {
@@ -90,6 +92,9 @@ export default ({
       this.historyIndex = this.clamp(++this.historyIndex, 0, this.history.length);
       this.command = this.history[this.historyIndex];
     }
+  },
+  mounted() {
+    this.commands.push(this.welcome)
   }
 })
 </script>
