@@ -39,6 +39,9 @@ import Welcome from '~/components/Welcome.vue'
 import Projects from '~/components/Projects.vue'
 import Project from '~/components/Project.vue'
 import Marika from '~/components/Marika.vue'
+import Bio from '~/components/Bio.vue'
+import Skill from '~/components/Skill.vue'
+import Contact from '~/components/Contact.vue'
 
 export default ({
   data() {
@@ -98,6 +101,18 @@ export default ({
       else if (command == 'marika') {
         this.commandHistory.push(command);
         this.commands.push(markRaw(Marika));
+      }
+      else if (command == 'bio') {
+        this.commandHistory.push(command);
+        this.commands.push(markRaw(Bio));
+      }
+      else if (command == 'skill') {
+        this.commandHistory.push(command);
+        this.commands.push(markRaw(Skill));
+      }
+      else if (command == 'contact') {
+        this.commandHistory.push(command);
+        this.commands.push(markRaw(Contact));
       }
       else if (command == 'welcome') {
         this.commandHistory.push(command);

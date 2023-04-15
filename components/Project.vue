@@ -1,22 +1,20 @@
 <template>
   <div>
-    <div v-if="!project">
-      project not found
-    </div>
     <div v-if="props?.commandHistory[props.index] == 'cd' || !project">
+      usage:
       <table class="usage">
         <tr>
-          <td>usage:</td>
+          <td>cd</td>
           <td>
-            cd [<span v-for="(tag, index) in projectsTags">
+            [<span v-for="(tag, index) in projectsTags">
               <span v-if="index != 0"> | </span>
               <span @click="executeCommand('cd ' + tag)" class="project-name">{{ tag }}</span>
             </span>]
           </td>
         </tr>
         <tr>
-          <td></td>
-          <td>cd [ from 0 to {{ projects.length - 1 }} ]</td>
+          <td>cd</td>
+          <td>[ from 0 to {{ projects.length - 1 }} ]</td>
         </tr>
       </table>
     </div>
@@ -75,6 +73,12 @@ export default ({
   td {
     vertical-align: baseline;
     padding: 8px;
+    padding-bottom: 0px;
+
+    &:first-child {
+      padding-left: 0px;
+      color: #E94B35;
+    }
   }
 
   .project-name {

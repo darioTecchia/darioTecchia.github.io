@@ -65,13 +65,14 @@ export default ({
 }
 
 table {
-  tr {
-    td {
-      padding-right: 20px;
+  td {
+    vertical-align: baseline;
+    padding: 8px;
+    padding-bottom: 0px;
 
-      &:first-child {
-        color: #E94B35;
-      }
+    &:first-child {
+      padding-left: 0px;
+      color: #E94B35;
     }
   }
 }
