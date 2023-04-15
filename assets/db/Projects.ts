@@ -4,6 +4,7 @@ export default [
     committee: "Nebula 7",
     date: "Dec 20",
     url: "//hotelmarinafinale.it",
+    description: '',
     tag: 'htlm'
   },
   {
@@ -11,6 +12,7 @@ export default [
     committee: "Nebula 7",
     date: "Nov 20",
     url: "//noseason.studiopesca.com",
+    description: '',
     tag: 'nssn'
   },
   {
@@ -18,6 +20,7 @@ export default [
     committee: "Nebula 7",
     date: "Sep 20",
     url: "//fondoristorante.it",
+    description: '',
     tag: 'fnd'
   },
   {
@@ -25,6 +28,7 @@ export default [
     committee: "Nebula 7",
     date: "May 20",
     url: "//centroippicopuntaala.it",
+    description: '',
     tag: 'pala'
   },
   {
@@ -32,6 +36,7 @@ export default [
     committee: "Nebula 7",
     date: "Feb 20",
     url: "//jillemanuelle.com",
+    description: '',
     tag: 'jlle'
   },
   {
@@ -39,6 +44,7 @@ export default [
     committee: "Nebula 7",
     date: "Oct 21",
     url: "",
+    description: '',
     tag: 'bvweb'
   },
   {
@@ -46,6 +52,7 @@ export default [
     committee: "Nebula 7",
     date: "Oct 21",
     url: "",
+    description: '',
     tag: 'bvbb'
   },
   {
@@ -53,6 +60,7 @@ export default [
     committee: "Nebula 7",
     date: "Oct 21",
     url: "",
+    description: '',
     tag: 'bvbm'
   },
   {
@@ -60,6 +68,7 @@ export default [
     committee: "Nebula 7",
     date: "Oct 21",
     url: "",
+    description: 'I partecipated to a video installation for the Princess of Asturias Awards',
     tag: 'sylva'
   },
   {
@@ -67,6 +76,7 @@ export default [
     committee: "NTT Data",
     date: "Now --",
     url: "",
+    description: '',
     tag: 'ntt'
   },
 ]

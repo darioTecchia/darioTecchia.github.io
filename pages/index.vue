@@ -85,22 +85,23 @@ export default ({
       }
       else if (command == 'h' || command == 'help') {
         this.commandHistory.push(command);
-        this.commands.push(Help);
+        this.commands.push(markRaw(Help));
       }
       else if (command == 'ls' || command == 'list') {
         this.commandHistory.push(command);
-        this.commands.push(Projects);
+        this.commands.push(markRaw(Projects));
       }
       else if (command == 'cd' || /^cd ([0-9]+|[a-zA-Z]+)$/g.test(command)) {
         this.commandHistory.push(command);
-        this.commands.push(Project);
+        this.commands.push(markRaw(Project));
       }
       else if (command == 'marika') {
         this.commandHistory.push(command);
-        this.commands.push(Marika);
+        this.commands.push(markRaw(Marika));
       }
       else {
         this.commands.push('command not found: ' + command + '</br></br>');
+        this.commandHistory.push(command);
       }
       this.commandInput = '';
       setTimeout(() => {
@@ -120,7 +121,8 @@ export default ({
     }
   },
   mounted() {
-    this.commands.push(Welcome)
+    this.commands.push(markRaw(Welcome));
+    this.commandHistory.push('');
   }
 })
 </script>

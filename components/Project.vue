@@ -1,7 +1,29 @@
 <template>
-  <pre>
-    {{ props?.commandHistory[props.index] }}
-  </pre>
+  <div>
+    <div v-if="!project">
+      project not found
+    </div>
+    <div v-if="props?.commandHistory[props.index] == 'cd' || !project">
+      <table class="usage">
+        <tr>
+          <td>usage:</td>
+          <td>
+            cd [<span v-for="(tag, index) in projectsTags">
+              <span v-if="index != 0"> | </span>
+              <span @click="executeCommand('cd ' + tag)" class="project-name">{{ tag }}</span>
+            </span>]
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>cd [ from 0 to {{ projects.length - 1 }} ]</td>
+        </tr>
+      </table>
+    </div>
+    <div v-else>
+      <ProjectDetail :project="project"></ProjectDetail>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -14,7 +36,6 @@ interface Props {
 }
 
 export default ({
-
   props: {
     executeCommand: Function,
     props: Object as PropType<Props>
@@ -22,30 +43,47 @@ export default ({
   data() {
     return {
       projects: Projects,
-      index: 0
     }
   },
   mounted() {
     console.log(this.props);
-    this.index++
   },
   unmounted() {
     console.log('unmounted');
   },
   beforeUnmount() {
     console.log('before unmounted');
+  },
+  computed: {
+    project() {
+      let projectIndex = this.props?.commandHistory[this.props?.index].split(' ')[1];
+      if (parseInt(projectIndex as string)) {
+        return this.projects[parseInt(projectIndex as string)]
+      } else {
+        return this.projects.find(p => p.tag == projectIndex)
+      }
+    },
+    projectsTags() {
+      return this.projects.map(p => p.tag)
+    }
   }
 })
 </script>
 
 <style lang="scss" scoped>
-ol {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
+.usage {
+  td {
+    vertical-align: baseline;
+    padding: 8px;
+  }
 
-.project-name {
-  color: #E94B35;
+  .project-name {
+    color: #E94B35;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
 }
 </style>
