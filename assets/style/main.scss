@@ -20,3 +20,23 @@ body {
 *:focus {
   outline: none !important;
 }
+
+ol,
+ul {
+  margin: 0px;
+}
+
+.active-folder {
+  color: #1AAF5C;
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}

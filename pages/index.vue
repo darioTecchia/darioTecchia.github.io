@@ -6,19 +6,28 @@
         <div class="dot yellow"></div>
         <div class="dot green"></div>
       </div>
-      <div class="content">
-        <template v-for="command in commands">
-          <template v-if="typeof command == 'object'">
-            <component :executeCommand="executeCommand" :is="command"></component>
+
+      <div class="content-wrap" ref="content_wrap">
+        <div class="content">
+          <template v-for="command, index in commands">
+            <div>~ /<span class="active-folder">dev</span> {{ commandHistory[index] }}</div>
+            <template v-if="typeof command == 'object'">
+              <component :executeCommand="executeCommand" v-bind:props="{ index, commandHistory }" :is="command">
+              </component>
+              <br>
+            </template>
+
+            <template v-else>
+              <div class="text-command" :innerHTML="command"></div>
+            </template>
           </template>
-          <template v-else>
-            <div>{{ command }}</div>
-          </template>
-        </template>
-      </div>
-      <div class="input">
-        ➜ / <span class="active-folder">dev</span>
-        <input ref="input" type="text" v-model="command" @keyup="submit">
+
+          <div class="input">
+            ~ / <span class="active-folder">dev&nbsp;</span>
+            <input ref="input" type="text" v-model="commandInput" @keyup="submit">
+          </div>
+
+        </div>
       </div>
     </div>
   </main>
@@ -28,22 +37,22 @@
 import Help from '~/components/Help.vue'
 import Welcome from '~/components/Welcome.vue'
 import Projects from '~/components/Projects.vue'
+import Project from '~/components/Project.vue'
 import Marika from '~/components/Marika.vue'
 
 export default ({
   data() {
     return {
       commands: [] as (string | any)[],
-      command: '' as string,
-
-      help: Help,
-      welcome: Welcome,
-      projects: Projects,
-      marika: Marika,
+      commandInput: '' as string,
+      commandHistory: [] as string[],
 
       historyIndex: 0,
       history: [] as string[],
+
     }
+  },
+  computed: {
   },
   methods: {
     submit(e: KeyboardEvent) {
@@ -59,54 +68,59 @@ export default ({
         this.commands = [];
       }
 
-      if (e.code == "Enter" && this.command !== '') {
-        this.executeCommand(this.command);
+      if (e.code == "Enter" && this.commandInput !== '') {
+        this.executeCommand(this.commandInput);
       }
     },
     focus() {
       (this.$refs.input as HTMLElement)?.focus();
     },
     executeCommand(command: string) {
-      this.historyIndex++;
+      this.historyIndex = this.history.length + 1;
       this.history.push(command);
-      this.commands.push('➜ ' + command);
-      switch (command) {
-        case 'c':
-        case 'clear':
-          this.commands = [];
-          break;
-
-        case 'h':
-        case 'help':
-          this.commands.push(this.help);
-          break;
-
-        case 'list':
-          this.commands.push(this.projects);
-          break;
-
-        case 'marika':
-          this.commands.push(this.marika);
-          break;
-
-        default:
-          this.commands.push('command not found: ' + command);
-          break;
+      // this.commands.push('~ /<span class="active-folder">dev</span> ' + command);
+      if (command == 'c' || command == 'clear') {
+        this.commandHistory = [];
+        this.commands = [];
       }
-      this.command = '';
+      else if (command == 'h' || command == 'help') {
+        this.commandHistory.push(command);
+        this.commands.push(Help);
+      }
+      else if (command == 'ls' || command == 'list') {
+        this.commandHistory.push(command);
+        this.commands.push(Projects);
+      }
+      else if (command == 'cd' || /^cd ([0-9]+|[a-zA-Z]+)$/g.test(command)) {
+        this.commandHistory.push(command);
+        this.commands.push(Project);
+      }
+      else if (command == 'marika') {
+        this.commandHistory.push(command);
+        this.commands.push(Marika);
+      }
+      else {
+        this.commands.push('command not found: ' + command + '</br></br>');
+      }
+      this.commandInput = '';
+      setTimeout(() => {
+        console.log('scroll');
+        let contentWrap = this.$refs.content_wrap as HTMLElement;
+        contentWrap.scrollTop = contentWrap.scrollHeight;
+      }, 100)
     },
     clamp: (num: number, min: number, max: number): number => Math.min(Math.max(num, min), max),
     historyUp() {
       this.historyIndex = this.clamp(--this.historyIndex, 0, this.history.length)
-      this.command = this.history[this.historyIndex];
+      this.commandInput = this.history[this.historyIndex];
     },
     historyDown() {
       this.historyIndex = this.clamp(++this.historyIndex, 0, this.history.length);
-      this.command = this.history[this.historyIndex];
+      this.commandInput = this.history[this.historyIndex];
     }
   },
   mounted() {
-    this.commands.push(this.welcome)
+    this.commands.push(Welcome)
   }
 })
 </script>
@@ -119,6 +133,10 @@ export default ({
   background-color: #353535;
 
   border-radius: 5px;
+
+  .text-command {
+    white-space: break-spaces;
+  }
 
   .bar {
     background-color: #2c2b29;
@@ -148,7 +166,7 @@ export default ({
   }
 
   .input {
-    padding: 0 4px;
+    // padding: 0 4px;
 
     display: flex;
     align-items: center;
@@ -156,23 +174,23 @@ export default ({
     flex-direction: row;
     flex-wrap: wrap;
 
-    .active-folder {
-      color: #1AAF5C;
-    }
-
     input {
       border: unset;
       background: transparent;
       color: inherit;
       flex: 1;
-      margin-left: 10px;
+      // margin-left: 10px;
     }
   }
 
-  .content {
+  .content-wrap {
     padding: 4px;
-    max-height: calc(100% - 22px - 30px);
+    max-height: calc(100% - 22px);
     overflow-y: scroll;
+
+    .content {
+      max-width: 640px;
+    }
   }
 }
 </style>

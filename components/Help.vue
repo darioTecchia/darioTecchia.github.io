@@ -1,16 +1,20 @@
 <template>
   <table>
     <tr>
-      <td><button class="command-button" @click="executeCommand('help')">h or help</button></td>
+      <td><button class="command-button" @click="executeCommand('help')">h | help</button></td>
       <td>Print Help (this message)</td>
     </tr>
     <tr>
-      <td><button class="command-button" @click="executeCommand('clear')">c or clear</button></td>
+      <td><button class="command-button" @click="executeCommand('clear')">c | clear</button></td>
       <td>Clear console</td>
     </tr>
     <tr>
-      <td><button class="command-button" @click="executeCommand('list')">ls or list</button></td>
-      <td>List projects</td>
+      <td><button class="command-button" @click="executeCommand('list')">ls | list</button></td>
+      <td>List projects and experiences</td>
+    </tr>
+    <tr>
+      <td><button class="command-button" @click="executeCommand('cd')">cd [tag|index]</button></td>
+      <td>Show project detail</td>
     </tr>
     <tr>
       <td><button class="command-button" @click="executeCommand('skill')">skill</button></td>
@@ -49,6 +53,7 @@ export default ({
   background: unset;
   padding: unset;
   color: #E94B35;
+  text-align: left;
 
   &:hover {
     text-decoration: underline;

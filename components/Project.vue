@@ -1,25 +1,33 @@
 <template>
-  <ol>
-    <li v-for="(project, index) in projects" @click="executeCommand('cd ' + project.tag)">
-      {{ project.tag.padEnd(10, '-') }}@ {{ index }} {{ project.committee }} staff 160 {{ project.date }}
-      <span class="project-name">{{ project.name }}</span>
-    </li>
-  </ol>
+  <pre>
+    {{ props?.commandHistory[props.index] }}
+  </pre>
 </template>
 
 <script lang="ts">
+import { PropType } from 'vue';
 import Projects from '~/assets/db/Projects'
 
+interface Props {
+  commandHistory: string[],
+  index: number
+}
+
 export default ({
+
   props: {
-    executeCommand: { type: Function },
+    executeCommand: Function,
+    props: Object as PropType<Props>
   },
   data() {
     return {
-      projects: Projects
+      projects: Projects,
+      index: 0
     }
   },
   mounted() {
+    console.log(this.props);
+    this.index++
   },
   unmounted() {
     console.log('unmounted');

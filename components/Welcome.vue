@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="welcome">
     <pre>
 ██████╗  █████╗ ██████╗ ██╗ ██████╗ ████████╗███████╗ ██████╗ ██████╗██╗  ██╗██╗ █████╗ 
 ██╔══██╗██╔══██╗██╔══██╗██║██╔═══██╗╚══██╔══╝██╔════╝██╔════╝██╔════╝██║  ██║██║██╔══██╗
@@ -9,7 +9,7 @@
 ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝ ╚═════╝    ╚═╝   ╚══════╝ ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝
     </pre>
     Welcome on dariotecchia's website
-    <br><br>
+    <br>
     Type "<button class="command-button" @click="executeCommand('h')">h</button>" for help.
     <br>
     Use ↑ and ↓ to navigate through the commands history.
@@ -43,6 +43,11 @@ pre {
   line-height: 1;
   font-weight: bold;
   margin-bottom: unset;
+  overflow: hidden;
+}
+
+.welcome {
+  margin-bottom: 20px;
 }
 
 .command-button {
