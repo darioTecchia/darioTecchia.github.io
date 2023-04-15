@@ -99,6 +99,10 @@ export default ({
         this.commandHistory.push(command);
         this.commands.push(markRaw(Marika));
       }
+      else if (command == 'welcome') {
+        this.commandHistory.push(command);
+        this.commands.push(markRaw(Welcome));
+      }
       else {
         this.commands.push('command not found: ' + command + '</br></br>');
         this.commandHistory.push(command);

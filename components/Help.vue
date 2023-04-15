@@ -1,6 +1,10 @@
 <template>
   <table>
     <tr>
+      <td><button class="command-button" @click="executeCommand('welcome')">welcome</button></td>
+      <td>Show welcome message</td>
+    </tr>
+    <tr>
       <td><button class="command-button" @click="executeCommand('help')">h | help</button></td>
       <td>Print Help (this message)</td>
     </tr>
