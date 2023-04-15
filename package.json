@@ -1,20 +1,20 @@
 {
-  "name": "dariotecchia.github.io",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/darioTecchia/darioTecchia.github.io"
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "deploy": "nuxt generate && gh-pages --dotfiles -d .output/public"
   },
-  "keywords": [],
-  "author": "Codrops",
-  "license": "MIT",
-  "homepage": "[HOMEPAGE]",
+  "devDependencies": {
+    "gh-pages": "^5.0.0",
+    "nuxt": "^3.1.2",
+    "sass": "^1.61.0",
+    "sass-loader": "^10.4.1"
+  },
   "dependencies": {
-    "gsap": "^3.6.0",
-    "jquery": "3.5.1",
-    "lazyload": "2.0.0-rc.2",
-    "vue": "^3.0.5"
+    "bootstrap-vue-3": "^0.5.1"
   }
 }
