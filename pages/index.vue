@@ -140,8 +140,9 @@ export default ({
     }
   },
   mounted() {
+    this.commandHistory.push('welcome');
     this.commands.push(markRaw(Welcome));
-    this.commandHistory.push('');
+    // this.commandHistory.push('');
   }
 })
 </script>
