@@ -133,15 +133,18 @@ export default ({
     historyUp() {
       this.historyIndex = this.clamp(--this.historyIndex, 0, this.history.length)
       this.commandInput = this.history[this.historyIndex];
+      this.$refs.input.selectionStart = this.$refs.input.selectionEnd = this.$refs.input.value.length;
     },
     historyDown() {
       this.historyIndex = this.clamp(++this.historyIndex, 0, this.history.length);
       this.commandInput = this.history[this.historyIndex];
+      this.$refs.input.selectionStart = this.$refs.input.selectionEnd = this.$refs.input.value.length;
     }
   },
   mounted() {
+    this.commandHistory.push('welcome');
     this.commands.push(markRaw(Welcome));
-    this.commandHistory.push('');
+    // this.commandHistory.push('');
   }
 })
 </script>
