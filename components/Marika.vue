@@ -1,9 +1,5 @@
 <template>
-  Ti piacerebbe, Marika.
-  <br>
-  A Roma, con due gin tonic nel sangue.
-  <br>
-  💚
+  🌷🌈🍟
 </template>
 
 <script lang="ts">
